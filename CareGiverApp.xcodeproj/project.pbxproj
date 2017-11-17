@@ -12,6 +12,9 @@
 		278514E51FBE5AA500228F1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 278514E31FBE5AA500228F1A /* Main.storyboard */; };
 		278514E71FBE5AA500228F1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278514E61FBE5AA500228F1A /* Assets.xcassets */; };
 		278514EA1FBE5AA500228F1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 278514E81FBE5AA500228F1A /* LaunchScreen.storyboard */; };
+		278514F21FBE5D2500228F1A /* TitleScreen2.png in Resources */ = {isa = PBXBuildFile; fileRef = 278514F11FBE5D2500228F1A /* TitleScreen2.png */; };
+		278514F51FBE680000228F1A /* iconToDo.png in Resources */ = {isa = PBXBuildFile; fileRef = 278514F31FBE680000228F1A /* iconToDo.png */; };
+		278514F61FBE680000228F1A /* iconClients.png in Resources */ = {isa = PBXBuildFile; fileRef = 278514F41FBE680000228F1A /* iconClients.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		278514E61FBE5AA500228F1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		278514E91FBE5AA500228F1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		278514EB1FBE5AA500228F1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		278514F11FBE5D2500228F1A /* TitleScreen2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TitleScreen2.png; sourceTree = "<group>"; };
+		278514F31FBE680000228F1A /* iconToDo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconToDo.png; sourceTree = "<group>"; };
+		278514F41FBE680000228F1A /* iconClients.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconClients.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,9 @@
 		278514DE1FBE5AA500228F1A /* CareGiverApp */ = {
 			isa = PBXGroup;
 			children = (
+				278514F11FBE5D2500228F1A /* TitleScreen2.png */,
+				278514F41FBE680000228F1A /* iconClients.png */,
+				278514F31FBE680000228F1A /* iconToDo.png */,
 				278514DF1FBE5AA500228F1A /* AppDelegate.swift */,
 				278514E11FBE5AA500228F1A /* ViewController.swift */,
 				278514E31FBE5AA500228F1A /* Main.storyboard */,
@@ -124,8 +133,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				278514EA1FBE5AA500228F1A /* LaunchScreen.storyboard in Resources */,
+				278514F61FBE680000228F1A /* iconClients.png in Resources */,
 				278514E71FBE5AA500228F1A /* Assets.xcassets in Resources */,
 				278514E51FBE5AA500228F1A /* Main.storyboard in Resources */,
+				278514F21FBE5D2500228F1A /* TitleScreen2.png in Resources */,
+				278514F51FBE680000228F1A /* iconToDo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
