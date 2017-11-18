@@ -7,17 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27803A971FC0CD68000B7223 /* iconToDo.png in Resources */ = {isa = PBXBuildFile; fileRef = 27803A951FC0CD68000B7223 /* iconToDo.png */; };
+		27803A981FC0CD68000B7223 /* iconClients.png in Resources */ = {isa = PBXBuildFile; fileRef = 27803A961FC0CD68000B7223 /* iconClients.png */; };
+		27803A9B1FC0D139000B7223 /* iconContacts.png in Resources */ = {isa = PBXBuildFile; fileRef = 27803A991FC0D139000B7223 /* iconContacts.png */; };
+		27803A9C1FC0D139000B7223 /* iconSchedule.png in Resources */ = {isa = PBXBuildFile; fileRef = 27803A9A1FC0D139000B7223 /* iconSchedule.png */; };
 		278514E01FBE5AA500228F1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278514DF1FBE5AA500228F1A /* AppDelegate.swift */; };
 		278514E21FBE5AA500228F1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278514E11FBE5AA500228F1A /* ViewController.swift */; };
 		278514E51FBE5AA500228F1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 278514E31FBE5AA500228F1A /* Main.storyboard */; };
 		278514E71FBE5AA500228F1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278514E61FBE5AA500228F1A /* Assets.xcassets */; };
 		278514EA1FBE5AA500228F1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 278514E81FBE5AA500228F1A /* LaunchScreen.storyboard */; };
 		278514F21FBE5D2500228F1A /* TitleScreen2.png in Resources */ = {isa = PBXBuildFile; fileRef = 278514F11FBE5D2500228F1A /* TitleScreen2.png */; };
-		278514F91FBE6B8F00228F1A /* iconToDo.png in Resources */ = {isa = PBXBuildFile; fileRef = 278514F71FBE6B8F00228F1A /* iconToDo.png */; };
-		278514FA1FBE6B8F00228F1A /* iconClients.png in Resources */ = {isa = PBXBuildFile; fileRef = 278514F81FBE6B8F00228F1A /* iconClients.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		27803A951FC0CD68000B7223 /* iconToDo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconToDo.png; sourceTree = "<group>"; };
+		27803A961FC0CD68000B7223 /* iconClients.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconClients.png; sourceTree = "<group>"; };
+		27803A991FC0D139000B7223 /* iconContacts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconContacts.png; sourceTree = "<group>"; };
+		27803A9A1FC0D139000B7223 /* iconSchedule.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconSchedule.png; sourceTree = "<group>"; };
 		278514DC1FBE5AA500228F1A /* CareGiverApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CareGiverApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		278514DF1FBE5AA500228F1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		278514E11FBE5AA500228F1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,8 +32,6 @@
 		278514E91FBE5AA500228F1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		278514EB1FBE5AA500228F1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		278514F11FBE5D2500228F1A /* TitleScreen2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TitleScreen2.png; sourceTree = "<group>"; };
-		278514F71FBE6B8F00228F1A /* iconToDo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iconToDo.png; path = "../../graphic assets/iconToDo.png"; sourceTree = "<group>"; };
-		278514F81FBE6B8F00228F1A /* iconClients.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iconClients.png; path = "../../graphic assets/iconClients.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +65,10 @@
 			isa = PBXGroup;
 			children = (
 				278514F11FBE5D2500228F1A /* TitleScreen2.png */,
-				278514F81FBE6B8F00228F1A /* iconClients.png */,
-				278514F71FBE6B8F00228F1A /* iconToDo.png */,
+				27803A961FC0CD68000B7223 /* iconClients.png */,
+				27803A991FC0D139000B7223 /* iconContacts.png */,
+				27803A9A1FC0D139000B7223 /* iconSchedule.png */,
+				27803A951FC0CD68000B7223 /* iconToDo.png */,
 				278514DF1FBE5AA500228F1A /* AppDelegate.swift */,
 				278514E11FBE5AA500228F1A /* ViewController.swift */,
 				278514E31FBE5AA500228F1A /* Main.storyboard */,
@@ -133,10 +139,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				278514EA1FBE5AA500228F1A /* LaunchScreen.storyboard in Resources */,
+				27803A9C1FC0D139000B7223 /* iconSchedule.png in Resources */,
 				278514E71FBE5AA500228F1A /* Assets.xcassets in Resources */,
-				278514F91FBE6B8F00228F1A /* iconToDo.png in Resources */,
+				27803A9B1FC0D139000B7223 /* iconContacts.png in Resources */,
+				27803A971FC0CD68000B7223 /* iconToDo.png in Resources */,
 				278514E51FBE5AA500228F1A /* Main.storyboard in Resources */,
-				278514FA1FBE6B8F00228F1A /* iconClients.png in Resources */,
+				27803A981FC0CD68000B7223 /* iconClients.png in Resources */,
 				278514F21FBE5D2500228F1A /* TitleScreen2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
