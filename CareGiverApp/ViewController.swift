@@ -10,8 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBAction func mainIconClients(_ sender: Any) {
-    }
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +21,21 @@ class ViewController: UIViewController {
         UIGraphicsEndImageContext()
         self.view.backgroundColor = UIColor(patternImage: image)
     }
-
+    @IBAction func mainIconClients(_ sender: UIButton) {
+    }
+    
+    @IBAction func mainIconToDo(_ sender: UIButton) {
+    }
+    
+    @IBAction func mainIconContacts(_ sender: UIButton) {
+    }
+    
+    @IBAction func mainIconSchedule(_ sender: UIButton) {
+    }
+    
+    @IBAction func goBack(_ sender: UIButton) {
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
