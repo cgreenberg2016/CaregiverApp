@@ -14,17 +14,17 @@ class Contact: NSObject {
     var address1 : String?
     var address2 : String?
     var city : String?
-    var zipCode : String?
+    var zipcode : String?
     var state : String?
     var email : String?
 
-    init(name: String? = nil, phone: String? = nil, address1: String? = nil, address2: String? = nil, city: String? = nil, zipCode: String? = nil, state: String? = nil, email: String? = nil) {
+    init(name: String? = nil, phone: String? = nil, address1: String? = nil, address2: String? = nil, city: String? = nil, zipcode: String? = nil, state: String? = nil, email: String? = nil) {
     self.name = name
     self.phone = phone
     self.address1 = address1
     self.address2 = address2
     self.city = city
-    self.zipCode = zipCode
+    self.zipcode = zipcode
     self.state = state
     self.email = email
     super.init()

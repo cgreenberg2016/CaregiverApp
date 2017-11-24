@@ -32,6 +32,24 @@ class DetailViewController: UIViewController {
             if let phone = contact.phone {
                 self.phoneLabel.text = phone
             }
+            if let address1 = contact.address1 {
+                self.address1Label.text = address1
+            }
+            if let address2 = contact.address2 {
+                self.address2Label.text = address2
+            }
+            if let city = contact.city {
+                self.cityLabel.text = city
+            }
+            if let state = contact.state {
+                self.stateLabel.text = state
+            }
+            if let zipcode = contact.zipcode {
+                self.zipcodeLabel.text = zipcode
+            }
+            if let email = contact.email {
+                self.emailLabel.text = email
+            }
         }
     }
 

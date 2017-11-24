@@ -14,10 +14,16 @@ class ClientsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+      /*  let moveButton = UIBarButtonItem(barButtonSystemItem: .edit,  target: self, action: #selector(ClientsTableViewController.toggleEdit))
+        navigationItem.leftBarButtonItem = moveButton
+        
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(ClientsTableViewController.addContact))
+        navigationItem.rightBarButtonItem = addButton */
+        
         let jenny = Contact(phone: "867-5309")
         let rich = Contact(name: "Rich", phone: "888-888-8888")
         let jane = Contact(name: "Jane")
-        let carol = Contact(name: "Carol Greenberg", email: "carolg.com@gmail.com")
+        let carol = Contact(name: "Carol Greenberg", phone: "808-769-2532", address1: "130 Bennett Ave.", city: "Long Beach", zipcode: "90803", state:"California", email: "carolg.com@gmail.com")
         
         self.contacts.append(jenny)
         self.contacts.append(rich)
@@ -28,14 +34,31 @@ class ClientsTableViewController: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+         self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
+    @objc func toggleEdit() {
+        tableView.setEditing(!tableView.isEditing, animated: true)
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(ClientsTableViewController.doneEdit))
+        navigationItem.leftBarButtonItem = doneButton
+    }
+    @objc func doneEdit() {
+        tableView.setEditing(false, animated: true)
+        let moveButton = UIBarButtonItem(barButtonSystemItem: .edit,  target: self, action: #selector(ClientsTableViewController.toggleEdit))
+        navigationItem.leftBarButtonItem = moveButton
+    }
+    
+    @objc func addContact() {
+        let newContact = Contact(name: "Enter New Contact", phone: "Enter New Phone Number")
+        self.contacts.append(newContact)
+        let newIndexPath = IndexPath(row: self.contacts.count - 1, section: 0)
+        self.tableView.insertRows(at: [newIndexPath], with: .automatic)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -102,12 +125,12 @@ class ClientsTableViewController: UITableViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-  /*  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let indexPath = self.tableView.indexPath(for: sender as! UITableViewCell)!
         let contact = self.contacts[indexPath.row]
         let destination = segue.destination as! DetailViewController
         destination.contact = contact
-    } */
+    }
     
 
 }
