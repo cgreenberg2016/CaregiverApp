@@ -1,4 +1,4 @@
-//
+                    //
 //  DetailViewController.swift
 //  CareGiverApp
 //
@@ -9,7 +9,7 @@
 import UIKit
 
 class ClientsViewController: UIViewController {
-
+    
     @IBOutlet weak var ScrollView: UIScrollView!
     
     @IBOutlet weak var nameLabel: UITextField!
@@ -62,7 +62,7 @@ class ClientsViewController: UIViewController {
             let notificationCenter = NotificationCenter.default
             notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: Notification.Name.UIKeyboardWillHide, object: nil)
             notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: Notification.Name.UIKeyboardWillChangeFrame, object: nil)
-           
+            
             
             
             let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ClientsViewController.dismissKeyboard))
@@ -85,14 +85,14 @@ class ClientsViewController: UIViewController {
         let keyboardViewEndFrame = view.convert(keyboardScreenEndFrame, from: view.window)
         
         if notification.name == Notification.Name.UIKeyboardWillHide {
-            ScrollView?.contentInset = UIEdgeInsets.zero
-        } else {
-            ScrollView?.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardViewEndFrame.height, right: 0)
+            ScrollView.contentInset = UIEdgeInsets.zero
+             } else {
+            ScrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardViewEndFrame.height, right: 0)
+             }
         }
+    
     }
     
-    
-    
-   
 
-}
+
+

@@ -217,10 +217,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxv-jY-0Oy">
-                                <rect key="frame" x="20" y="95" width="280" height="404"/>
+                                <rect key="frame" x="20" y="95" width="300" height="404"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YeW-hl-zd2">
-                                        <rect key="frame" x="0.0" y="0.0" width="265" height="372"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="372"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ILd-vz-MY3">
                                                 <rect key="frame" x="10" y="10" width="270" height="352"/>
@@ -334,15 +334,15 @@
                                             <constraint firstItem="ILd-vz-MY3" firstAttribute="leading" secondItem="YeW-hl-zd2" secondAttribute="leading" constant="10" id="MYB-pD-6T4"/>
                                             <constraint firstAttribute="bottom" secondItem="ILd-vz-MY3" secondAttribute="bottom" constant="10" id="QqG-ID-YoQ"/>
                                             <constraint firstItem="ILd-vz-MY3" firstAttribute="top" secondItem="YeW-hl-zd2" secondAttribute="top" constant="10" id="XDy-mN-FPi"/>
-                                            <constraint firstAttribute="width" constant="265" id="gKI-ht-8Zj"/>
+                                            <constraint firstAttribute="width" constant="290" id="rRk-ic-BBq"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="YeW-hl-zd2" secondAttribute="trailing" id="9RJ-Ds-Vvk"/>
-                                    <constraint firstItem="YeW-hl-zd2" firstAttribute="leading" secondItem="hxv-jY-0Oy" secondAttribute="leading" id="aTu-bQ-DlV"/>
-                                    <constraint firstItem="YeW-hl-zd2" firstAttribute="top" secondItem="hxv-jY-0Oy" secondAttribute="top" id="fs8-mw-sje"/>
-                                    <constraint firstAttribute="bottom" secondItem="YeW-hl-zd2" secondAttribute="bottom" constant="51" id="q1E-lm-Clj"/>
+                                    <constraint firstItem="YeW-hl-zd2" firstAttribute="leading" secondItem="hxv-jY-0Oy" secondAttribute="leading" id="YiQ-LC-Bxf"/>
+                                    <constraint firstAttribute="bottom" secondItem="YeW-hl-zd2" secondAttribute="bottom" id="a4v-2I-21l"/>
+                                    <constraint firstItem="YeW-hl-zd2" firstAttribute="top" secondItem="hxv-jY-0Oy" secondAttribute="top" id="sZr-ne-u4Q"/>
+                                    <constraint firstAttribute="trailing" secondItem="YeW-hl-zd2" secondAttribute="trailing" id="vyE-Qh-8fk"/>
                                 </constraints>
                             </scrollView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o6a-jr-dVR">
@@ -354,13 +354,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="vfd-c9-QvG" firstAttribute="trailing" secondItem="hxv-jY-0Oy" secondAttribute="trailing" constant="20" id="5JD-Xd-2Ae"/>
                             <constraint firstItem="o6a-jr-dVR" firstAttribute="leading" secondItem="Ufr-ay-Tdy" secondAttribute="leadingMargin" id="FHv-Ik-Jc1"/>
-                            <constraint firstItem="vfd-c9-QvG" firstAttribute="top" secondItem="o6a-jr-dVR" secondAttribute="bottom" constant="-28" id="GF1-nL-dgP"/>
-                            <constraint firstItem="vfd-c9-QvG" firstAttribute="bottom" secondItem="hxv-jY-0Oy" secondAttribute="bottom" constant="20" id="L7x-df-79E"/>
-                            <constraint firstItem="hxv-jY-0Oy" firstAttribute="leading" secondItem="vfd-c9-QvG" secondAttribute="leading" constant="20" id="ers-0K-LJ4"/>
-                            <constraint firstItem="hxv-jY-0Oy" firstAttribute="top" secondItem="o6a-jr-dVR" secondAttribute="bottom" constant="3" id="pLR-FM-OS8"/>
+                            <constraint firstItem="vfd-c9-QvG" firstAttribute="bottom" secondItem="hxv-jY-0Oy" secondAttribute="bottom" constant="20" id="IXH-z3-GJl"/>
+                            <constraint firstItem="o6a-jr-dVR" firstAttribute="top" secondItem="vfd-c9-QvG" secondAttribute="top" id="Tzr-Ah-aeR"/>
+                            <constraint firstItem="hxv-jY-0Oy" firstAttribute="leading" secondItem="Ufr-ay-Tdy" secondAttribute="leading" constant="20" id="hd8-mv-c93"/>
+                            <constraint firstItem="hxv-jY-0Oy" firstAttribute="top" secondItem="o6a-jr-dVR" secondAttribute="bottom" constant="3" id="n20-3c-9O2"/>
                             <constraint firstItem="vfd-c9-QvG" firstAttribute="trailing" secondItem="o6a-jr-dVR" secondAttribute="trailing" constant="88" id="qvd-go-2b2"/>
+                            <constraint firstAttribute="trailing" secondItem="hxv-jY-0Oy" secondAttribute="trailing" id="waD-WJ-Z2K"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vfd-c9-QvG"/>
                     </view>
@@ -396,7 +396,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MLZ-0j-fPd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3645" y="701"/>
+            <point key="canvasLocation" x="3645" y="820"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="sMb-vj-kNx">
@@ -407,6 +407,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" red="0.19462236760000001" green="0.72885853050000005" blue="0.86372172830000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="selectedImageTintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
