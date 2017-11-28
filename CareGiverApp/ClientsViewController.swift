@@ -59,37 +59,16 @@ class ClientsViewController: UIViewController {
                 self.emailLabel.text = email
             }
             
-            let notificationCenter = NotificationCenter.default
-            notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: Notification.Name.UIKeyboardWillHide, object: nil)
-            notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: Notification.Name.UIKeyboardWillChangeFrame, object: nil)
-            
-            
-            
-            let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ClientsViewController.dismissKeyboard))
-            tap.cancelsTouchesInView = false
-            view.addGestureRecognizer(tap)
+   
         }
     }
-    @objc func dismissKeyboard(){
-        view.endEditing(true)
-    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    @objc func adjustForKeyboard(notification: Notification) {
-        let userInfo = notification.userInfo!
-        
-        let keyboardScreenEndFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
-        let keyboardViewEndFrame = view.convert(keyboardScreenEndFrame, from: view.window)
-        
-        if notification.name == Notification.Name.UIKeyboardWillHide {
-            ScrollView.contentInset = UIEdgeInsets.zero
-             } else {
-            ScrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardViewEndFrame.height, right: 0)
-             }
-        }
+ 
     
     }
     
