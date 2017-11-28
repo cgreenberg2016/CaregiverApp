@@ -8,8 +8,10 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class ClientsViewController: UIViewController {
 
+    @IBOutlet weak var ScrollView: UIScrollView!
+    
     @IBOutlet weak var nameLabel: UITextField!
     @IBOutlet weak var phoneLabel: UITextField!
     @IBOutlet weak var address1Label: UITextField!
@@ -24,6 +26,12 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         self.nameLabel.delegate = self as? UITextFieldDelegate
         self.phoneLabel.delegate = self as? UITextFieldDelegate
+        self.address1Label.delegate = self as? UITextFieldDelegate
+        self.address2Label.delegate = self as? UITextFieldDelegate
+        self.cityLabel.delegate = self as? UITextFieldDelegate
+        self.stateLabel.delegate = self as? UITextFieldDelegate
+        self.zipcodeLabel.delegate = self as? UITextFieldDelegate
+        self.emailLabel.delegate = self as? UITextFieldDelegate
         
         if let contact = self.contact {
             if let name = contact.name {
@@ -50,12 +58,37 @@ class DetailViewController: UIViewController {
             if let email = contact.email {
                 self.emailLabel.text = email
             }
+            
+            let notificationCenter = NotificationCenter.default
+            notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: Notification.Name.UIKeyboardWillHide, object: nil)
+            notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: Notification.Name.UIKeyboardWillChangeFrame, object: nil)
+           
+            
+            
+            let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ClientsViewController.dismissKeyboard))
+            tap.cancelsTouchesInView = false
+            view.addGestureRecognizer(tap)
         }
     }
-
+    @objc func dismissKeyboard(){
+        view.endEditing(true)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @objc func adjustForKeyboard(notification: Notification) {
+        let userInfo = notification.userInfo!
+        
+        let keyboardScreenEndFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        let keyboardViewEndFrame = view.convert(keyboardScreenEndFrame, from: view.window)
+        
+        if notification.name == Notification.Name.UIKeyboardWillHide {
+            ScrollView?.contentInset = UIEdgeInsets.zero
+        } else {
+            ScrollView?.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardViewEndFrame.height, right: 0)
+        }
     }
     
     

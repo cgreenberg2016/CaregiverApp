@@ -128,9 +128,15 @@ class ClientsTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let indexPath = self.tableView.indexPath(for: sender as! UITableViewCell)!
         let contact = self.contacts[indexPath.row]
-        let destination = segue.destination as! DetailViewController
+        let destination = segue.destination as! ClientsViewController
         destination.contact = contact
-    }
+        
+        
+               
+            }
+        }
+        
+
     
 
-}
+

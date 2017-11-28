@@ -12,7 +12,7 @@
 		27803A9B1FC0D139000B7223 /* iconContacts.png in Resources */ = {isa = PBXBuildFile; fileRef = 27803A991FC0D139000B7223 /* iconContacts.png */; };
 		27803A9C1FC0D139000B7223 /* iconSchedule.png in Resources */ = {isa = PBXBuildFile; fileRef = 27803A9A1FC0D139000B7223 /* iconSchedule.png */; };
 		278514E01FBE5AA500228F1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278514DF1FBE5AA500228F1A /* AppDelegate.swift */; };
-		278514E21FBE5AA500228F1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278514E11FBE5AA500228F1A /* ViewController.swift */; };
+		278514E21FBE5AA500228F1A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278514E11FBE5AA500228F1A /* HomeViewController.swift */; };
 		278514E51FBE5AA500228F1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 278514E31FBE5AA500228F1A /* Main.storyboard */; };
 		278514E71FBE5AA500228F1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278514E61FBE5AA500228F1A /* Assets.xcassets */; };
 		278514EA1FBE5AA500228F1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 278514E81FBE5AA500228F1A /* LaunchScreen.storyboard */; };
@@ -20,7 +20,8 @@
 		278F93E21FC36A4F00733969 /* ToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278F93E11FC36A4F00733969 /* ToDoViewController.swift */; };
 		278F93E61FC4D2AB00733969 /* ClientsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278F93E51FC4D2AB00733969 /* ClientsTableViewController.swift */; };
 		278F93E81FC4D61800733969 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278F93E71FC4D61800733969 /* Contact.swift */; };
-		278F93EA1FC4E32A00733969 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278F93E91FC4E32A00733969 /* DetailViewController.swift */; };
+		278F93EA1FC4E32A00733969 /* ClientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278F93E91FC4E32A00733969 /* ClientsViewController.swift */; };
+		27BFAD3D1FCCE56900D76833 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BFAD3C1FCCE56900D76833 /* Schedule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +31,7 @@
 		27803A9A1FC0D139000B7223 /* iconSchedule.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconSchedule.png; sourceTree = "<group>"; };
 		278514DC1FBE5AA500228F1A /* CareGiverApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CareGiverApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		278514DF1FBE5AA500228F1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		278514E11FBE5AA500228F1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		278514E11FBE5AA500228F1A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		278514E41FBE5AA500228F1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		278514E61FBE5AA500228F1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		278514E91FBE5AA500228F1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,7 +40,8 @@
 		278F93E11FC36A4F00733969 /* ToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewController.swift; sourceTree = "<group>"; };
 		278F93E51FC4D2AB00733969 /* ClientsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsTableViewController.swift; sourceTree = "<group>"; };
 		278F93E71FC4D61800733969 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
-		278F93E91FC4E32A00733969 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		278F93E91FC4E32A00733969 /* ClientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsViewController.swift; sourceTree = "<group>"; };
+		27BFAD3C1FCCE56900D76833 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,14 +77,15 @@
 				278514F11FBE5D2500228F1A /* TitleScreen2.png */,
 				27803A961FC0CD68000B7223 /* iconClients.png */,
 				278F93E51FC4D2AB00733969 /* ClientsTableViewController.swift */,
-				278F93E91FC4E32A00733969 /* DetailViewController.swift */,
+				278F93E91FC4E32A00733969 /* ClientsViewController.swift */,
 				278F93E71FC4D61800733969 /* Contact.swift */,
 				27803A991FC0D139000B7223 /* iconContacts.png */,
 				27803A9A1FC0D139000B7223 /* iconSchedule.png */,
 				27803A951FC0CD68000B7223 /* iconToDo.png */,
 				278514DF1FBE5AA500228F1A /* AppDelegate.swift */,
-				278514E11FBE5AA500228F1A /* ViewController.swift */,
+				278514E11FBE5AA500228F1A /* HomeViewController.swift */,
 				278514E31FBE5AA500228F1A /* Main.storyboard */,
+				27BFAD3C1FCCE56900D76833 /* Schedule.swift */,
 				278F93E11FC36A4F00733969 /* ToDoViewController.swift */,
 				278514E61FBE5AA500228F1A /* Assets.xcassets */,
 				278514E81FBE5AA500228F1A /* LaunchScreen.storyboard */,
@@ -171,8 +174,9 @@
 				278F93E61FC4D2AB00733969 /* ClientsTableViewController.swift in Sources */,
 				278F93E21FC36A4F00733969 /* ToDoViewController.swift in Sources */,
 				278F93E81FC4D61800733969 /* Contact.swift in Sources */,
-				278F93EA1FC4E32A00733969 /* DetailViewController.swift in Sources */,
-				278514E21FBE5AA500228F1A /* ViewController.swift in Sources */,
+				278F93EA1FC4E32A00733969 /* ClientsViewController.swift in Sources */,
+				278514E21FBE5AA500228F1A /* HomeViewController.swift in Sources */,
+				27BFAD3D1FCCE56900D76833 /* Schedule.swift in Sources */,
 				278514E01FBE5AA500228F1A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
