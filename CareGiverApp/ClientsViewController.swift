@@ -27,6 +27,11 @@
                         override func viewDidLoad() {
                             super.viewDidLoad()
                             
+                            let notificationCenter = NotificationCenter.default
+                            notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: Notification.Name.UIKeyboardWillHide, object: nil)
+                            notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: Notification.Name.UIKeyboardWillChangeFrame, object: nil)
+                            
+                            
                            
                             
                             self.nameLabel.delegate = self as? UITextFieldDelegate
@@ -75,7 +80,23 @@
                             // Dispose of any resources that can be recreated.
                         }
                         
-                        
+                        @objc func adjustForKeyboard(notification: Notification) {
+                            let userInfo = notification.userInfo!
+                            
+                            let keyboardScreenEndFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+                            let keyboardViewEndFrame = view.convert(keyboardScreenEndFrame, from: view.window)
+                            
+                            if notification.name == Notification.Name.UIKeyboardWillHide {
+                                ScrollView.contentInset = UIEdgeInsets.zero
+                            } else {
+                                ScrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardViewEndFrame.height, right: 0)
+                            }
+                            
+                            ScrollView.scrollIndicatorInsets = ScrollView.contentInset
+                            
+                          //  let selectedRange = ScrollView.selectedRange
+                          //  ScrollView.scrollRangeToVisible(selectedRange)
+                        }
                         
                     }
                     
