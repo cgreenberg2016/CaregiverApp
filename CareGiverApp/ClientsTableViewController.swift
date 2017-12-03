@@ -14,11 +14,11 @@ class ClientsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-      /*  let moveButton = UIBarButtonItem(barButtonSystemItem: .edit,  target: self, action: #selector(ClientsTableViewController.toggleEdit))
-        navigationItem.leftBarButtonItem = moveButton
+       // let moveButton = UIBarButtonItem(barButtonSystemItem: .edit,  target: self, action: //#selector(ClientsTableViewController.toggleEdit))
+       // navigationItem.leftBarButtonItem = moveButton
         
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(ClientsTableViewController.addContact))
-        navigationItem.rightBarButtonItem = addButton */
+        navigationItem.rightBarButtonItem = addButton
         
         let jenny = Contact(phone: "867-5309")
         let rich = Contact(name: "Rich", phone: "888-888-8888")
@@ -34,7 +34,7 @@ class ClientsTableViewController: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-         self.navigationItem.rightBarButtonItem = self.editButtonItem
+         self.navigationItem.leftBarButtonItem = self.editButtonItem
     }
     @objc func toggleEdit() {
         tableView.setEditing(!tableView.isEditing, animated: true)

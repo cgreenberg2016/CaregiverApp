@@ -10,6 +10,8 @@
                     
                     class ClientsViewController: UIViewController {
                         
+                        
+                        
                         @IBOutlet weak var ScrollView: UIScrollView!
                         
                         @IBOutlet weak var AddressView: UIView!
@@ -26,11 +28,11 @@
                         
                         override func viewDidLoad() {
                             super.viewDidLoad()
-                            
+                       
+                            // keyboard notification for scrolling
                             let notificationCenter = NotificationCenter.default
                             notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: Notification.Name.UIKeyboardWillHide, object: nil)
                             notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: Notification.Name.UIKeyboardWillChangeFrame, object: nil)
-                            
                             
                            
                             
@@ -79,7 +81,7 @@
                             super.didReceiveMemoryWarning()
                             // Dispose of any resources that can be recreated.
                         }
-                        
+                        // adjust scrolling for when keyboard appears
                         @objc func adjustForKeyboard(notification: Notification) {
                             let userInfo = notification.userInfo!
                             
