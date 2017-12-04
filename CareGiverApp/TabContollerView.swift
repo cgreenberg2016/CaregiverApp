@@ -24,11 +24,5 @@ class TabControllerView: UITabBarItem {
     
     func commonInit() {
        
-        
-      //  let tabBarItemApperance = UITabBarItem.appearance()
-       // tabBarItemApperance.setTitleTextAttributes[UIColor.red]; for: UIControlState.normal)
-     //   tabBarItemApperance.setTitleTextAttributes([NSAttributedStringKey.foregroundColor:UIColor.red], for: UIControlState.normal)
-        
-     //   self.setTitleTextAttributes([NSAttributedStringKey.font: UIFont.systemFont(ofSize: 13), NSAttributedStringKey.foregroundColor:UIColor.red], for: UIControlState.selected)
     }
 }

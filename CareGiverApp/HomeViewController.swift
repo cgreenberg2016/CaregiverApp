@@ -56,22 +56,22 @@ class HomeViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ClientsSegue" {
             if let destination = segue.destination as? UITabBarController {
-                destination.selectedIndex = 1
+                destination.selectedIndex = 0
             }
         }
         if segue.identifier == "ToDoSegue" {
             if let destination = segue.destination as? UITabBarController {
-                destination.selectedIndex = 0
+                destination.selectedIndex = 3
             }
           }
         if segue.identifier == "ScheduleSegue" {
             if let destination = segue.destination as? UITabBarController {
-                destination.selectedIndex = 2
+                destination.selectedIndex = 1
             }
         }
         if segue.identifier == "ContactsSegue" {
             if let destination = segue.destination as? UITabBarController {
-                destination.selectedIndex = 3
+                destination.selectedIndex = 2
             }
         }
     }

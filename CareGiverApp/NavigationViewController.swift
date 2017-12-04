@@ -10,8 +10,5 @@ import UIKit
 
 class navigationViewController: UINavigationController {
 
- //   override func viewDidLoad() {
- //       UINavigationController.UIColor.red
- //   }
     
 }

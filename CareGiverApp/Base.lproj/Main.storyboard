@@ -142,7 +142,7 @@
                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="CareGiver App" id="y6q-7k-R1y">
+                                    <navigationItem title="CareGiverApp" id="y6q-7k-R1y">
                                         <barButtonItem key="backBarButtonItem" title="Back" id="Tx5-SV-6ZZ"/>
                                     </navigationItem>
                                 </items>
@@ -161,15 +161,15 @@
             </objects>
             <point key="canvasLocation" x="1547" y="590"/>
         </scene>
-        <!--Clients Table View Controller-->
+        <!--CareGiverApp-->
         <scene sceneID="g9W-Fw-JIk">
             <objects>
-                <tableViewController id="FKk-yT-0ER" customClass="ClientsTableViewController" customModule="CareGiverApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="FKk-yT-0ER" customClass="ContactsTableViewController" customModule="CareGiverApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gvf-9g-jU6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Clients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="a8l-fn-Y0u">
+                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Contacts" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="a8l-fn-Y0u">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="28"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
@@ -203,7 +203,7 @@
                             <outlet property="delegate" destination="FKk-yT-0ER" id="DJi-cg-FyM"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="8nh-L7-9YJ"/>
+                    <navigationItem key="navigationItem" title="CareGiverApp" id="8nh-L7-9YJ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4pa-d1-ZP9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -212,7 +212,7 @@
         <!--CaregiverApp-->
         <scene sceneID="ces-ay-vgU">
             <objects>
-                <viewController id="tLu-uo-Qqt" customClass="ClientsViewController" customModule="CareGiverApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="tLu-uo-Qqt" customClass="ContactViewController" customModule="CareGiverApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ufr-ay-Tdy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -351,8 +351,8 @@
                                     <constraint firstItem="YeW-hl-zd2" firstAttribute="leading" secondItem="hxv-jY-0Oy" secondAttribute="leading" id="xD6-Ph-rza"/>
                                 </constraints>
                             </scrollView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o6a-jr-dVR">
-                                <rect key="frame" x="16" y="64" width="74" height="28"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contacts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o6a-jr-dVR">
+                                <rect key="frame" x="16" y="64" width="98" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
                                 <color key="textColor" red="1" green="0.49682571980000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -411,15 +411,27 @@
                                     <navigationItem title="CareGiverApp" id="QdH-QZ-32H"/>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iml-fc-1P1">
+                                <rect key="frame" x="9" y="76" width="216" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                <color key="textColor" red="1" green="0.49682571980000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5lm-xm-NxI">
+                                <rect key="frame" x="0.0" y="112" width="320" height="407"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ly6-XY-ip4"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Contacts" image="btnContactsSm" selectedImage="btnContactsSm" id="94N-ae-oHZ"/>
+                    <tabBarItem key="tabBarItem" title="Clients" image="btnClientsSm_1" selectedImage="btnClientsSm_1" id="94N-ae-oHZ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Io-6m-E7s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="512" y="917"/>
+            <point key="canvasLocation" x="511.875" y="916.90140845070425"/>
         </scene>
         <!--Schedule-->
         <scene sceneID="lPT-d7-CW5">
@@ -440,6 +452,13 @@
                                     <navigationItem title="CareGiverApp" id="IdS-Xj-C7D"/>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Schedule" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ry1-Po-0Bd">
+                                <rect key="frame" x="16" y="75" width="216" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                <color key="textColor" red="1" green="0.49682571980000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="R8V-Nl-A8F"/>
@@ -475,26 +494,26 @@
                         </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
-                        <segue destination="Wkn-HH-T90" kind="relationship" relationship="viewControllers" id="280-18-sCW"/>
-                        <segue destination="NiC-kn-Nff" kind="relationship" relationship="viewControllers" id="hhN-4z-F2t"/>
-                        <segue destination="IBr-tY-4B3" kind="relationship" relationship="viewControllers" id="iJz-7t-9iB"/>
                         <segue destination="kC3-6Y-vxp" kind="relationship" relationship="viewControllers" id="LDT-BW-6wB"/>
+                        <segue destination="IBr-tY-4B3" kind="relationship" relationship="viewControllers" id="iJz-7t-9iB"/>
+                        <segue destination="NiC-kn-Nff" kind="relationship" relationship="viewControllers" id="hhN-4z-F2t"/>
+                        <segue destination="Wkn-HH-T90" kind="relationship" relationship="viewControllers" id="280-18-sCW"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DRh-dh-IHk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="827" y="117"/>
         </scene>
-        <!--Clients-->
+        <!--Contacts-->
         <scene sceneID="k82-cp-glm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NiC-kn-Nff" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Clients" image="btnClientsSm_1" selectedImage="btnClientsSm_1" id="viX-5y-foc"/>
+                    <tabBarItem key="tabBarItem" title="Contacts" image="btnContactsSm" selectedImage="btnContactsSm" id="viX-5y-foc"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4Y5-4A-ExI">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.30653464794158936" green="0.76092439889907837" blue="0.87496519088745117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.062745098039215685" green="0.68627450980392157" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
@@ -520,7 +539,7 @@
         <image name="iconToDo.png" width="199" height="186"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="LIw-Pm-H5l"/>
+        <segue reference="heO-KQ-AEc"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
