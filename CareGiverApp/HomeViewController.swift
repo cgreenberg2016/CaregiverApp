@@ -20,13 +20,11 @@ class HomeViewController: UIViewController {
         let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         self.view.backgroundColor = UIColor(patternImage: image)
-       
+        
         // custom colors for tab bar icons and labels
         UITabBar.appearance().unselectedItemTintColor = UIColor.white
         UITabBar.appearance().tintColor = UIColor.orange
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.white], for: UIControlState.normal)
-        
-       
+    UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.white], for: UIControlState.normal)
         
        
     }
@@ -56,7 +54,7 @@ class HomeViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ClientsSegue" {
             if let destination = segue.destination as? UITabBarController {
-                destination.selectedIndex = 0
+                destination.selectedIndex = 1
             }
         }
         if segue.identifier == "ToDoSegue" {
@@ -66,12 +64,12 @@ class HomeViewController: UIViewController {
           }
         if segue.identifier == "ScheduleSegue" {
             if let destination = segue.destination as? UITabBarController {
-                destination.selectedIndex = 1
+                destination.selectedIndex = 2
             }
         }
         if segue.identifier == "ContactsSegue" {
             if let destination = segue.destination as? UITabBarController {
-                destination.selectedIndex = 2
+                destination.selectedIndex = 0
             }
         }
     }
