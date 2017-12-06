@@ -24,7 +24,7 @@ class HomeViewController: UIViewController {
         // custom colors for tab bar icons and labels
         UITabBar.appearance().unselectedItemTintColor = UIColor.white
         UITabBar.appearance().tintColor = UIColor.orange
-    UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.white], for: UIControlState.normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.white], for: UIControlState.normal)
         
        
     }
