@@ -86,7 +86,7 @@
         <!--Clients-->
         <scene sceneID="VLT-lH-fye">
             <objects>
-                <viewController title="Clients" id="X4W-eU-azF" sceneMemberID="viewController">
+                <viewController title="Clients" id="X4W-eU-azF" customClass="clientsTableView" customModule="CareGiverApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LoT-M3-l5u">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -154,6 +154,10 @@
                         <viewLayoutGuide key="safeArea" id="pgr-eg-gEO"/>
                     </view>
                     <navigationItem key="navigationItem" title="CareGiver App" id="aQk-IM-2QM"/>
+                    <connections>
+                        <outlet property="clientName" destination="eeo-SC-zTQ" id="inp-hb-TFd"/>
+                        <outlet property="clientPhoto" destination="WCx-tX-XR9" id="M5E-Y5-iHZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EVV-QO-DtU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

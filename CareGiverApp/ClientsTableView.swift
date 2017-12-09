@@ -8,7 +8,7 @@
 
 import UIKit
 
-class clientsTableView: UITableView {
+class clientsTableView: UIViewController {
     
-   // var clients:[Client] = []
+    // var clients:[Client] = []
 }
