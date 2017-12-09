@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		277473AA1FD8AD2000E9AA4F /* ClientsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277473A91FD8AD2000E9AA4F /* ClientsTableView.swift */; };
 		277473AD1FDA181600E9AA4F /* CaregiverAppModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 277473AB1FDA181600E9AA4F /* CaregiverAppModel.xcdatamodeld */; };
+		277473BC1FDC967300E9AA4F /* ToDoTasks+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277473BA1FDC967300E9AA4F /* ToDoTasks+CoreDataClass.swift */; };
+		277473BD1FDC967300E9AA4F /* ToDoTasks+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277473BB1FDC967300E9AA4F /* ToDoTasks+CoreDataProperties.swift */; };
 		27803A971FC0CD68000B7223 /* iconToDo.png in Resources */ = {isa = PBXBuildFile; fileRef = 27803A951FC0CD68000B7223 /* iconToDo.png */; };
 		27803A981FC0CD68000B7223 /* iconClients.png in Resources */ = {isa = PBXBuildFile; fileRef = 27803A961FC0CD68000B7223 /* iconClients.png */; };
 		27803A9B1FC0D139000B7223 /* iconContacts.png in Resources */ = {isa = PBXBuildFile; fileRef = 27803A991FC0D139000B7223 /* iconContacts.png */; };
@@ -29,6 +31,8 @@
 /* Begin PBXFileReference section */
 		277473A91FD8AD2000E9AA4F /* ClientsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsTableView.swift; sourceTree = "<group>"; };
 		277473AC1FDA181600E9AA4F /* CaregiverAppModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CaregiverAppModel.xcdatamodel; sourceTree = "<group>"; };
+		277473BA1FDC967300E9AA4F /* ToDoTasks+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoTasks+CoreDataClass.swift"; sourceTree = "<group>"; };
+		277473BB1FDC967300E9AA4F /* ToDoTasks+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoTasks+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		27803A951FC0CD68000B7223 /* iconToDo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconToDo.png; sourceTree = "<group>"; };
 		27803A961FC0CD68000B7223 /* iconClients.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconClients.png; sourceTree = "<group>"; };
 		27803A991FC0D139000B7223 /* iconContacts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconContacts.png; sourceTree = "<group>"; };
@@ -78,6 +82,8 @@
 		278514DE1FBE5AA500228F1A /* CareGiverApp */ = {
 			isa = PBXGroup;
 			children = (
+				277473BA1FDC967300E9AA4F /* ToDoTasks+CoreDataClass.swift */,
+				277473BB1FDC967300E9AA4F /* ToDoTasks+CoreDataProperties.swift */,
 				278514F11FBE5D2500228F1A /* TitleScreen2.png */,
 				27803A961FC0CD68000B7223 /* iconClients.png */,
 				278F93E51FC4D2AB00733969 /* ContactsTableViewController.swift */,
@@ -177,10 +183,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				277473BD1FDC967300E9AA4F /* ToDoTasks+CoreDataProperties.swift in Sources */,
 				278F93E61FC4D2AB00733969 /* ContactsTableViewController.swift in Sources */,
 				278F93E21FC36A4F00733969 /* ToDoViewController.swift in Sources */,
 				278F93E81FC4D61800733969 /* Contact.swift in Sources */,
 				278F93EA1FC4E32A00733969 /* ContactsViewController.swift in Sources */,
+				277473BC1FDC967300E9AA4F /* ToDoTasks+CoreDataClass.swift in Sources */,
 				278514E21FBE5AA500228F1A /* HomeViewController.swift in Sources */,
 				27BFAD3D1FCCE56900D76833 /* Schedule.swift in Sources */,
 				277473AD1FDA181600E9AA4F /* CaregiverAppModel.xcdatamodeld in Sources */,

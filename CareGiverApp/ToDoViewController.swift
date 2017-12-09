@@ -25,9 +25,11 @@ class ToDoViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        do {
-           // txtOutput = try title.fetch(ToDoTasks.fetchRequest())
-        }
+//        do {
+//            txtOutput = try context.fetch(ToDoTasks.fetchRequest())
+//        } catch {
+//            print("Fetching Failed")
+//        }
     }
 
     override func didReceiveMemoryWarning() {
