@@ -11,6 +11,9 @@ import UIKit
 class ToDoViewController: UIViewController {
     @IBOutlet weak var txtOutput: UITextView!
     @IBOutlet weak var txtInput: UITextField!
+    private var appDelegate = UIApplication.shared.delegate as! AppDelegate
+    private let context = (UIApplication.shared.delegate as! AppDelegate).persistantContainer.viewContext
+    //Carol 12.8
     
     var items: [String] = []
     
@@ -18,6 +21,13 @@ class ToDoViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        do {
+           // txtOutput = try title.fetch(ToDoTasks.fetchRequest())
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,14 +48,14 @@ class ToDoViewController: UIViewController {
         txtInput.resignFirstResponder()
     }
     
-    /*
-    // MARK: - Navigation
+    
+  //   MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+   //  In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+      //   Get the new view controller using segue.destinationViewController.
+      //   Pass the selected object to the new view controller.
     }
-    */
+    
 
 }
