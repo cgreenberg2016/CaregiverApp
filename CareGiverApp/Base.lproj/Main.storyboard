@@ -154,10 +154,6 @@
                         <viewLayoutGuide key="safeArea" id="pgr-eg-gEO"/>
                     </view>
                     <navigationItem key="navigationItem" title="CareGiver App" id="aQk-IM-2QM"/>
-                    <connections>
-                        <outlet property="clientName" destination="eeo-SC-zTQ" id="inp-hb-TFd"/>
-                        <outlet property="clientPhoto" destination="WCx-tX-XR9" id="M5E-Y5-iHZ"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EVV-QO-DtU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -171,9 +167,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YGW-lO-l3f">
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YGW-lO-l3f">
                                 <rect key="frame" x="0.0" y="519" width="320" height="49"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <tabBarItem title="Clients" id="FYq-uR-tGc"/>
@@ -181,16 +176,17 @@
                                 </items>
                                 <color key="tintColor" red="0.063018754124641418" green="0.68474429845809937" blue="0.84863108396530151" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tabBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To Do List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="04f-q8-Q9j">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To Do List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="04f-q8-Q9j">
                                 <rect key="frame" x="20" y="70" width="216" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="gCB-rP-ad2"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
                                 <color key="textColor" red="1" green="0.49682571976273149" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a To Do item here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KIx-Lp-qZR">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a To Do item here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KIx-Lp-qZR">
                                 <rect key="frame" x="20" y="99" width="216" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
@@ -207,16 +203,8 @@
                                     <action selector="addItem:" destination="Wkn-HH-T90" eventType="touchUpInside" id="he6-as-woP"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Vu0-jP-20u">
-                                <rect key="frame" x="16" y="138" width="288" height="357"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uPg-tp-UFz">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uPg-tp-UFz">
                                 <rect key="frame" x="0.0" y="19" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="barTintColor" red="0.063018754120000006" green="0.68474429849999996" blue="0.84863108399999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -227,14 +215,38 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GZb-UQ-opr">
+                                <rect key="frame" x="20" y="146" width="280" height="373"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YGW-lO-l3f" firstAttribute="top" secondItem="GZb-UQ-opr" secondAttribute="bottom" id="0Ks-e4-u7V"/>
+                            <constraint firstItem="YGW-lO-l3f" firstAttribute="top" secondItem="4ig-lB-L30" secondAttribute="bottom" id="3pK-Rc-bIr"/>
+                            <constraint firstItem="GZb-UQ-opr" firstAttribute="leading" secondItem="4ig-lB-L30" secondAttribute="leading" constant="20" id="7IR-wx-Ha5"/>
+                            <constraint firstItem="YGW-lO-l3f" firstAttribute="leading" secondItem="uPg-tp-UFz" secondAttribute="leading" id="8uS-Ph-FQv"/>
+                            <constraint firstItem="YGW-lO-l3f" firstAttribute="top" secondItem="GZb-UQ-opr" secondAttribute="bottom" id="9cu-r6-BEH"/>
+                            <constraint firstItem="uPg-tp-UFz" firstAttribute="top" secondItem="a8n-bc-wF2" secondAttribute="topMargin" constant="-1" id="Etx-wd-1B9"/>
+                            <constraint firstItem="YGW-lO-l3f" firstAttribute="trailing" secondItem="uPg-tp-UFz" secondAttribute="trailing" id="HWr-4W-gLi"/>
+                            <constraint firstItem="YGW-lO-l3f" firstAttribute="centerX" secondItem="GZb-UQ-opr" secondAttribute="centerX" id="Ixg-vv-yPX"/>
+                            <constraint firstItem="4ig-lB-L30" firstAttribute="trailing" secondItem="04f-q8-Q9j" secondAttribute="trailing" constant="84" id="MFd-KD-YJg"/>
+                            <constraint firstItem="KIx-Lp-qZR" firstAttribute="top" secondItem="04f-q8-Q9j" secondAttribute="bottom" constant="8" symbolic="YES" id="QH8-gz-ELP"/>
+                            <constraint firstItem="04f-q8-Q9j" firstAttribute="leading" secondItem="GZb-UQ-opr" secondAttribute="leading" id="RcC-Di-cGf"/>
+                            <constraint firstItem="04f-q8-Q9j" firstAttribute="top" secondItem="uPg-tp-UFz" secondAttribute="bottom" constant="7" id="aMT-dy-emq"/>
+                            <constraint firstItem="04f-q8-Q9j" firstAttribute="trailing" secondItem="KIx-Lp-qZR" secondAttribute="trailing" id="cWG-8n-lqW"/>
+                            <constraint firstItem="04f-q8-Q9j" firstAttribute="leading" secondItem="KIx-Lp-qZR" secondAttribute="leading" id="dbX-fU-HWp"/>
+                            <constraint firstItem="YGW-lO-l3f" firstAttribute="top" secondItem="GZb-UQ-opr" secondAttribute="bottom" id="hwf-JA-U4t"/>
+                            <constraint firstItem="YGW-lO-l3f" firstAttribute="leading" secondItem="a8n-bc-wF2" secondAttribute="leading" id="lr6-Dp-MYX"/>
+                            <constraint firstItem="4ig-lB-L30" firstAttribute="trailing" secondItem="GZb-UQ-opr" secondAttribute="trailing" constant="20" id="nXE-za-tQB"/>
+                            <constraint firstItem="GZb-UQ-opr" firstAttribute="top" secondItem="KIx-Lp-qZR" secondAttribute="bottom" constant="17" id="uQ4-bk-KkK"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="4ig-lB-L30"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="To Do" image="btnToDoSm_1" selectedImage="btnToDoSm_1" id="Pc4-be-TuJ"/>
                     <connections>
+                        <outlet property="TableResults" destination="GZb-UQ-opr" id="Wuc-vY-iEA"/>
                         <outlet property="txtInput" destination="KIx-Lp-qZR" id="7Bs-or-ggw"/>
-                        <outlet property="txtOutput" destination="Vu0-jP-20u" id="ST7-5h-JVL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xEe-k6-S1n" userLabel="First Responder" sceneMemberID="firstResponder"/>

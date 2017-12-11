@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		273452391FDDE6540000613C /* Tasks+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273452371FDDE6540000613C /* Tasks+CoreDataClass.swift */; };
+		2734523A1FDDE6540000613C /* Tasks+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273452381FDDE6540000613C /* Tasks+CoreDataProperties.swift */; };
 		277473AA1FD8AD2000E9AA4F /* ClientsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277473A91FD8AD2000E9AA4F /* ClientsTableView.swift */; };
+		277473C41FDCAB4D00E9AA4F /* CareGiverModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 277473C21FDCAB4D00E9AA4F /* CareGiverModel.xcdatamodeld */; };
 		27803A971FC0CD68000B7223 /* iconToDo.png in Resources */ = {isa = PBXBuildFile; fileRef = 27803A951FC0CD68000B7223 /* iconToDo.png */; };
 		27803A981FC0CD68000B7223 /* iconClients.png in Resources */ = {isa = PBXBuildFile; fileRef = 27803A961FC0CD68000B7223 /* iconClients.png */; };
 		27803A9B1FC0D139000B7223 /* iconContacts.png in Resources */ = {isa = PBXBuildFile; fileRef = 27803A991FC0D139000B7223 /* iconContacts.png */; };
@@ -26,7 +29,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		273452371FDDE6540000613C /* Tasks+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tasks+CoreDataClass.swift"; sourceTree = "<group>"; };
+		273452381FDDE6540000613C /* Tasks+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tasks+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		277473A91FD8AD2000E9AA4F /* ClientsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsTableView.swift; sourceTree = "<group>"; };
+		277473C31FDCAB4D00E9AA4F /* CareGiverModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CareGiverModel.xcdatamodel; sourceTree = "<group>"; };
 		27803A951FC0CD68000B7223 /* iconToDo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconToDo.png; sourceTree = "<group>"; };
 		27803A961FC0CD68000B7223 /* iconClients.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconClients.png; sourceTree = "<group>"; };
 		27803A991FC0D139000B7223 /* iconContacts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconContacts.png; sourceTree = "<group>"; };
@@ -60,6 +66,8 @@
 		278514D31FBE5AA500228F1A = {
 			isa = PBXGroup;
 			children = (
+				273452371FDDE6540000613C /* Tasks+CoreDataClass.swift */,
+				273452381FDDE6540000613C /* Tasks+CoreDataProperties.swift */,
 				278514DE1FBE5AA500228F1A /* CareGiverApp */,
 				278514DD1FBE5AA500228F1A /* Products */,
 			);
@@ -87,6 +95,7 @@
 				278514DF1FBE5AA500228F1A /* AppDelegate.swift */,
 				278514E11FBE5AA500228F1A /* HomeViewController.swift */,
 				278514E31FBE5AA500228F1A /* Main.storyboard */,
+				277473C21FDCAB4D00E9AA4F /* CareGiverModel.xcdatamodeld */,
 				277473A91FD8AD2000E9AA4F /* ClientsTableView.swift */,
 				27BFAD3C1FCCE56900D76833 /* Schedule.swift */,
 				278F93E11FC36A4F00733969 /* ToDoViewController.swift */,
@@ -175,8 +184,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				278F93E61FC4D2AB00733969 /* ContactsTableViewController.swift in Sources */,
+				2734523A1FDDE6540000613C /* Tasks+CoreDataProperties.swift in Sources */,
+				277473C41FDCAB4D00E9AA4F /* CareGiverModel.xcdatamodeld in Sources */,
 				278F93E21FC36A4F00733969 /* ToDoViewController.swift in Sources */,
 				278F93E81FC4D61800733969 /* Contact.swift in Sources */,
+				273452391FDDE6540000613C /* Tasks+CoreDataClass.swift in Sources */,
 				278F93EA1FC4E32A00733969 /* ContactsViewController.swift in Sources */,
 				278514E21FBE5AA500228F1A /* HomeViewController.swift in Sources */,
 				27BFAD3D1FCCE56900D76833 /* Schedule.swift in Sources */,
@@ -366,6 +378,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		277473C21FDCAB4D00E9AA4F /* CareGiverModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				277473C31FDCAB4D00E9AA4F /* CareGiverModel.xcdatamodel */,
+			);
+			currentVersion = 277473C31FDCAB4D00E9AA4F /* CareGiverModel.xcdatamodel */;
+			path = CareGiverModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 278514D41FBE5AA500228F1A /* Project object */;
 }

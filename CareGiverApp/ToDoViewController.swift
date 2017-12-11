@@ -7,47 +7,88 @@
 //
 
 import UIKit
+import CoreData
 
-class ToDoViewController: UIViewController {
-    @IBOutlet weak var txtOutput: UITextView!
+class ToDoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var TableResults: UITableView!
+    
+    var tasks : [Tasks] = []
+
     @IBOutlet weak var txtInput: UITextField!
-    private var appDelegate = UIApplication.shared.delegate as! AppDelegate
-    private let context = (UIApplication.shared.delegate as! AppDelegate).persistantContainer.viewContext
-    //Carol 12.8
+     var appDelegate = UIApplication.shared.delegate as! AppDelegate
+     let context = (UIApplication.shared.delegate as! AppDelegate).persistantContainer.viewContext
     
     var items: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        TableResults?.delegate = self
+        TableResults?.dataSource = self as? UITableViewDataSource
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-//        do {
-//            txtOutput = try context.fetch(ToDoTasks.fetchRequest())
-//        } catch {
-//            print("Fetching Failed")
-//        }
+        //get data from core data
+        getData()
+        // reload the table view
+        TableResults?.reloadData()
     }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection: Int) -> Int {
+        return tasks.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        let task = tasks[indexPath.row]
+        return cell
+    }
+    
+    // fetch data
+    func getData() {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistantContainer.viewContext
+        
+        do {
+            tasks = try context.fetch(Tasks.fetchRequest())
+        }
+        catch {
+            print ("Fetching failed")
+        }
+    }
+    
+    // delete items in list
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistantContainer.viewContext
+        
+        if editingStyle == .delete {
+            let task = tasks[indexPath.row]
+            context.delete(task)
+            (UIApplication.shared.delegate as! AppDelegate).saveContext()
+            
+            do {
+                tasks = try context.fetch(Tasks.fetchRequest())
+            }
+            catch {
+                print ("Fetching failed")
+            }
+        }
+        tableView.reloadData()
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func addItem(_ sender: Any) {
-        if (txtInput.text! == "") {
-            return
-        }
-        items.append(txtInput.text!)
-        txtOutput.text = ""
-        for item in items {
-            txtOutput.text.append("\(item)\n")
-        }
-        txtInput.text = ""
-        txtInput.resignFirstResponder()
+    @IBAction func addItem(_ sender: UIButton) {
+       let context = (UIApplication.shared.delegate as! AppDelegate).persistantContainer.viewContext
+// Carol 12/10
+       let task = Tasks(context: context)
+        task.title = txtInput.text
+
+         (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        
+        navigationController!.popViewController(animated: true)
     }
     
     

@@ -15,13 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     // create container
-    var persistantContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "ToDoTasks")
+     var persistantContainer: NSPersistentContainer = {
+        let container = NSPersistentContainer(name: "Tasks")
         container.loadPersistentStores(completionHandler: {
             (storeDescription, error) in
             print(storeDescription)
             if let error = error as NSError? {
-                fatalError("Unresolved error \(error), \(error.userInfo)")
+                fatalError("CAROL Unresolved error \(error), \(error.userInfo)")
             }
         } )
         return container
