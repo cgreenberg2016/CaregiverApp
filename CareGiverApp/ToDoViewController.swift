@@ -83,8 +83,8 @@ class ToDoViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBAction func addItem(_ sender: UIButton) {
        let context = (UIApplication.shared.delegate as! AppDelegate).persistantContainer.viewContext
 // Carol 12/10
-       let task = Tasks(context: context)
-        task.title = txtInput.text
+     //  let task = Tasks(context: context)
+       // task.title = txtInput.text
 
          (UIApplication.shared.delegate as! AppDelegate).saveContext()
         
