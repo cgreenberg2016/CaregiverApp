@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // create container
      var persistantContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "Tasks")
+        let container = NSPersistentContainer(name: "CareGiverModel2")
         container.loadPersistentStores(completionHandler: {
             (storeDescription, error) in
             print(storeDescription)

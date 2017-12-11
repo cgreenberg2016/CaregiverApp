@@ -40,7 +40,29 @@ class ToDoViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         let task = tasks[indexPath.row]
+        cell.textLabel?.text = task.title
+        if task.completed {
+           // cell.accessoryType = .checkmark
+            cell.imageView?.image = UIImage(named: "checkedbox")
+        } else {
+           // cell.accessoryType = .none
+            cell.imageView?.image = UIImage(named: "uncheckedbox")
+        }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       let task = tasks[indexPath.row]
+        task.completed = !task.completed
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        
+        do {
+            tasks = try context.fetch(Tasks.fetchRequest())
+        }
+        catch {
+            print ("Fetching failed")
+        }
+        TableResults.reloadData()
     }
     
     // fetch data
@@ -82,13 +104,15 @@ class ToDoViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBAction func addItem(_ sender: UIButton) {
        let context = (UIApplication.shared.delegate as! AppDelegate).persistantContainer.viewContext
-// Carol 12/10
-     //  let task = Tasks(context: context)
-       // task.title = txtInput.text
+       let task = Tasks(context: context)
+        task.title = txtInput.text
 
          (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        getData()
+        TableResults.reloadData()
+        txtInput.text = ""
         
-        navigationController!.popViewController(animated: true)
+      
     }
     
     
