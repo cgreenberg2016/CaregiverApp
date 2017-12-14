@@ -43,7 +43,7 @@ class ToDoViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.textLabel?.text = task.title
         if task.completed {
            // cell.accessoryType = .checkmark
-            cell.imageView?.image = UIImage(named: "checkedbox")
+            cell.imageView?.image = UIImage(named: "checkedbox4")
         } else {
            // cell.accessoryType = .none
             cell.imageView?.image = UIImage(named: "uncheckedbox")

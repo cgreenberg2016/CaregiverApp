@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    // create container
+    // create container for CareGiverModel2
      var persistantContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "CareGiverModel2")
         container.loadPersistentStores(completionHandler: {
@@ -39,6 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
+   
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

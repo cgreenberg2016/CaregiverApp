@@ -6,16 +6,11 @@
         <attribute name="contactCity" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="contactEmail" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="contactName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="contactPhone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="contactPhone" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="contactState" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="contactZip" optional="YES" attributeType="String" minValueString="5" maxValueString="9" syncable="YES"/>
-    </entity>
-    <entity name="Tasks" representedClassName="Tasks" syncable="YES">
-        <attribute name="completed" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="contactZip" optional="YES" attributeType="Integer 32" minValueString="5" maxValueString="9" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Tasks" positionX="-54" positionY="-9" width="128" height="75"/>
-        <element name="ContactsEntity" positionX="-45" positionY="18" width="128" height="165"/>
+        <element name="ContactsEntity" positionX="-63" positionY="-18" width="128" height="165"/>
     </elements>
 </model>

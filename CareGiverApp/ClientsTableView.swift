@@ -10,5 +10,7 @@ import UIKit
 
 class clientsTableView: UIViewController {
     
+    @IBOutlet weak var clientName: UILabel!
+    @IBOutlet weak var clientImage: UIImageView!
     // var clients:[Client] = []
 }

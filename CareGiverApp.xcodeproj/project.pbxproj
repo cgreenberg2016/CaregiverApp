@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2756B55B1FE07E15008DF02B /* ContactsEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2756B5591FE07E15008DF02B /* ContactsEntity+CoreDataClass.swift */; };
+		2756B55C1FE07E15008DF02B /* ContactsEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2756B55A1FE07E15008DF02B /* ContactsEntity+CoreDataProperties.swift */; };
 		277473AA1FD8AD2000E9AA4F /* ClientsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277473A91FD8AD2000E9AA4F /* ClientsTableView.swift */; };
 		27803A971FC0CD68000B7223 /* iconToDo.png in Resources */ = {isa = PBXBuildFile; fileRef = 27803A951FC0CD68000B7223 /* iconToDo.png */; };
 		27803A981FC0CD68000B7223 /* iconClients.png in Resources */ = {isa = PBXBuildFile; fileRef = 27803A961FC0CD68000B7223 /* iconClients.png */; };
@@ -20,7 +22,6 @@
 		278514F21FBE5D2500228F1A /* TitleScreen2.png in Resources */ = {isa = PBXBuildFile; fileRef = 278514F11FBE5D2500228F1A /* TitleScreen2.png */; };
 		278F93E21FC36A4F00733969 /* ToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278F93E11FC36A4F00733969 /* ToDoViewController.swift */; };
 		278F93E61FC4D2AB00733969 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278F93E51FC4D2AB00733969 /* ContactsTableViewController.swift */; };
-		278F93E81FC4D61800733969 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278F93E71FC4D61800733969 /* Contact.swift */; };
 		278F93EA1FC4E32A00733969 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278F93E91FC4E32A00733969 /* ContactsViewController.swift */; };
 		27BAB0161FDF320A0088507C /* Tasks+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BAB0141FDF320A0088507C /* Tasks+CoreDataClass.swift */; };
 		27BAB0171FDF320A0088507C /* Tasks+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BAB0151FDF320A0088507C /* Tasks+CoreDataProperties.swift */; };
@@ -29,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2756B5591FE07E15008DF02B /* ContactsEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContactsEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2756B55A1FE07E15008DF02B /* ContactsEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContactsEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		277473A91FD8AD2000E9AA4F /* ClientsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsTableView.swift; sourceTree = "<group>"; };
 		27803A951FC0CD68000B7223 /* iconToDo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconToDo.png; sourceTree = "<group>"; };
 		27803A961FC0CD68000B7223 /* iconClients.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconClients.png; sourceTree = "<group>"; };
@@ -44,7 +47,6 @@
 		278514F11FBE5D2500228F1A /* TitleScreen2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TitleScreen2.png; sourceTree = "<group>"; };
 		278F93E11FC36A4F00733969 /* ToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewController.swift; sourceTree = "<group>"; };
 		278F93E51FC4D2AB00733969 /* ContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
-		278F93E71FC4D61800733969 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		278F93E91FC4E32A00733969 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		27BAB0141FDF320A0088507C /* Tasks+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tasks+CoreDataClass.swift"; sourceTree = "<group>"; };
 		27BAB0151FDF320A0088507C /* Tasks+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tasks+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -66,6 +68,8 @@
 		278514D31FBE5AA500228F1A = {
 			isa = PBXGroup;
 			children = (
+				2756B5591FE07E15008DF02B /* ContactsEntity+CoreDataClass.swift */,
+				2756B55A1FE07E15008DF02B /* ContactsEntity+CoreDataProperties.swift */,
 				27BAB0201FDF33CD0088507C /* CareGiverModel2.xcdatamodeld */,
 				278514DE1FBE5AA500228F1A /* CareGiverApp */,
 				278514DD1FBE5AA500228F1A /* Products */,
@@ -83,25 +87,24 @@
 		278514DE1FBE5AA500228F1A /* CareGiverApp */ = {
 			isa = PBXGroup;
 			children = (
-				27BAB0141FDF320A0088507C /* Tasks+CoreDataClass.swift */,
-				27BAB0151FDF320A0088507C /* Tasks+CoreDataProperties.swift */,
-				278514F11FBE5D2500228F1A /* TitleScreen2.png */,
-				27803A961FC0CD68000B7223 /* iconClients.png */,
+				278514DF1FBE5AA500228F1A /* AppDelegate.swift */,
+				278514E61FBE5AA500228F1A /* Assets.xcassets */,
+				277473A91FD8AD2000E9AA4F /* ClientsTableView.swift */,
 				278F93E51FC4D2AB00733969 /* ContactsTableViewController.swift */,
 				278F93E91FC4E32A00733969 /* ContactsViewController.swift */,
-				278F93E71FC4D61800733969 /* Contact.swift */,
+				278514E11FBE5AA500228F1A /* HomeViewController.swift */,
+				27803A961FC0CD68000B7223 /* iconClients.png */,
 				27803A991FC0D139000B7223 /* iconContacts.png */,
 				27803A9A1FC0D139000B7223 /* iconSchedule.png */,
 				27803A951FC0CD68000B7223 /* iconToDo.png */,
-				278514DF1FBE5AA500228F1A /* AppDelegate.swift */,
-				278514E11FBE5AA500228F1A /* HomeViewController.swift */,
-				278514E31FBE5AA500228F1A /* Main.storyboard */,
-				277473A91FD8AD2000E9AA4F /* ClientsTableView.swift */,
-				27BFAD3C1FCCE56900D76833 /* Schedule.swift */,
-				278F93E11FC36A4F00733969 /* ToDoViewController.swift */,
-				278514E61FBE5AA500228F1A /* Assets.xcassets */,
-				278514E81FBE5AA500228F1A /* LaunchScreen.storyboard */,
 				278514EB1FBE5AA500228F1A /* Info.plist */,
+				278514E81FBE5AA500228F1A /* LaunchScreen.storyboard */,
+				278514E31FBE5AA500228F1A /* Main.storyboard */,
+				27BFAD3C1FCCE56900D76833 /* Schedule.swift */,
+				27BAB0141FDF320A0088507C /* Tasks+CoreDataClass.swift */,
+				27BAB0151FDF320A0088507C /* Tasks+CoreDataProperties.swift */,
+				278514F11FBE5D2500228F1A /* TitleScreen2.png */,
+				278F93E11FC36A4F00733969 /* ToDoViewController.swift */,
 			);
 			path = CareGiverApp;
 			sourceTree = "<group>";
@@ -185,14 +188,15 @@
 			files = (
 				278F93E61FC4D2AB00733969 /* ContactsTableViewController.swift in Sources */,
 				278F93E21FC36A4F00733969 /* ToDoViewController.swift in Sources */,
-				278F93E81FC4D61800733969 /* Contact.swift in Sources */,
 				27BAB0221FDF33CD0088507C /* CareGiverModel2.xcdatamodeld in Sources */,
 				278F93EA1FC4E32A00733969 /* ContactsViewController.swift in Sources */,
+				2756B55B1FE07E15008DF02B /* ContactsEntity+CoreDataClass.swift in Sources */,
 				278514E21FBE5AA500228F1A /* HomeViewController.swift in Sources */,
 				27BFAD3D1FCCE56900D76833 /* Schedule.swift in Sources */,
 				277473AA1FD8AD2000E9AA4F /* ClientsTableView.swift in Sources */,
 				27BAB0171FDF320A0088507C /* Tasks+CoreDataProperties.swift in Sources */,
 				27BAB0161FDF320A0088507C /* Tasks+CoreDataClass.swift in Sources */,
+				2756B55C1FE07E15008DF02B /* ContactsEntity+CoreDataProperties.swift in Sources */,
 				278514E01FBE5AA500228F1A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
