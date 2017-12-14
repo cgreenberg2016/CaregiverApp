@@ -19,19 +19,11 @@ class ContactsTableViewController: UITableViewController {
         super.viewDidLoad()
         TableContainer?.delegate = self
         TableContainer?.dataSource = self as? UITableViewDataSource
+       
         
       /*  let moveButton = UIBarButtonItem(barButtonSystemItem: .edit,  target: self, action: #selector(ClientsTableViewController.toggleEdit))
         navigationItem.leftBarButtonItem = moveButton*/
         
-//        let jenny = Contact(phone: "867-5309")
-//        let rich = Contact(name: "Rich", phone: "888-888-8888")
-//        let jane = Contact(name: "Jane")
-//        let carol = Contact(name: "Carol Greenberg", phone: "808-769-2532", address1: "130 Bennett Ave.", city: "Long Beach", zipcode: "90803", state:"California", email: "carolg.com@gmail.com")
-//
-//        self.contacts.append(jenny)
-//        self.contacts.append(rich)
-//        self.contacts.append(jane)
-//        self.contacts.append(carol)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
