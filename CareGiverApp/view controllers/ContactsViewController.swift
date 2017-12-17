@@ -7,6 +7,7 @@
                     //
                     
 import UIKit
+import CoreData
                     
 class ContactsViewController: UIViewController {
                         
@@ -25,8 +26,19 @@ class ContactsViewController: UIViewController {
 var contact: ContactsEntity?
                         
     @IBAction func DoneButton(_ sender: UIBarButtonItem) {
+        let context =  (UIApplication.shared.delegate as! AppDelegate).persistantContainer.viewContext
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
         navigationController!.popViewController(animated: true)
+        let contact = ContactsEntity(context: context)
+        contact.contactName = nameLabel.text
+        contact.contactPhone = phoneLabel.text
+        contact.contactAddress1 = address1Label.text
+        contact.contactAddress2 = address2Label.text
+        contact.contactCity = cityLabel.text
+        contact.contactState = stateLabel.text
+        contact.contactZip = zipcodeLabel.text
+        contact.contactEmail = emailLabel.text
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
     }
     
     override func viewDidLoad() {
@@ -37,9 +49,9 @@ var contact: ContactsEntity?
     notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: Notification.Name.UIKeyboardWillChangeFrame, object: nil)
     if contact == nil {
         let context =  (UIApplication.shared.delegate as! AppDelegate).persistantContainer.viewContext
-        let contact = ContactsEntity(context: context)
+        contact = ContactsEntity(context: context)
 
-        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        
         
     }
                             

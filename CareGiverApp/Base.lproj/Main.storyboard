@@ -286,7 +286,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="tLu-uo-Qqt" kind="show" identifier="DisplayContact" id="Zw7-kx-X5S"/>
+                                    <segue destination="tLu-uo-Qqt" kind="show" identifier="DisplayContact" id="Uuz-oa-sPY"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -315,7 +315,7 @@
         <!--CaregiverApp-->
         <scene sceneID="ces-ay-vgU">
             <objects>
-                <viewController id="tLu-uo-Qqt" customClass="ContactsViewController" customModule="CareGiverApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContactsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tLu-uo-Qqt" customClass="ContactsViewController" customModule="CareGiverApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ufr-ay-Tdy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -621,6 +621,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="heO-KQ-AEc"/>
-        <segue reference="Zw7-kx-X5S"/>
+        <segue reference="Uuz-oa-sPY"/>
     </inferredMetricsTieBreakers>
 </document>

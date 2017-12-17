@@ -58,12 +58,12 @@
 		2756B55D1FE1F838008DF02B /* view controllers */ = {
 			isa = PBXGroup;
 			children = (
-				278F93E11FC36A4F00733969 /* ToDoViewController.swift */,
-				27BFAD3C1FCCE56900D76833 /* Schedule.swift */,
 				277473A91FD8AD2000E9AA4F /* ClientsTableView.swift */,
 				278F93E51FC4D2AB00733969 /* ContactsTableViewController.swift */,
 				278F93E91FC4E32A00733969 /* ContactsViewController.swift */,
 				278514E11FBE5AA500228F1A /* HomeViewController.swift */,
+				27BFAD3C1FCCE56900D76833 /* Schedule.swift */,
+				278F93E11FC36A4F00733969 /* ToDoViewController.swift */,
 			);
 			path = "view controllers";
 			sourceTree = "<group>";
@@ -71,9 +71,9 @@
 		2756B55E1FE1F8A8008DF02B /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
+				27BAB0201FDF33CD0088507C /* CareGiverModel2.xcdatamodeld */,
 				2756B5591FE07E15008DF02B /* ContactsEntity+CoreDataClass.swift */,
 				2756B55A1FE07E15008DF02B /* ContactsEntity+CoreDataProperties.swift */,
-				27BAB0201FDF33CD0088507C /* CareGiverModel2.xcdatamodeld */,
 				27BAB0141FDF320A0088507C /* Tasks+CoreDataClass.swift */,
 				27BAB0151FDF320A0088507C /* Tasks+CoreDataProperties.swift */,
 			);

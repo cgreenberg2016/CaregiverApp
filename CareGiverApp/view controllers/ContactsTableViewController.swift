@@ -36,13 +36,16 @@ class ContactsTableViewController: UITableViewController {
         getData()
         // reload the table view
         TableContainer?.reloadData()
+        //make the table display the name
+        
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection: Int) -> Int {
         return contacts.count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        let task = contacts[indexPath.row]
+        let contact = contacts[indexPath.row]
+        cell.textLabel?.text = contact.contactName
         return cell
     }
     // fetch data
@@ -57,6 +60,15 @@ class ContactsTableViewController: UITableViewController {
         }
     }
     
+    // manually show segue
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let contact = self.contacts[indexPath.row]
+        if
+            let destination = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ContactsViewController") as? ContactsViewController {
+        destination.contact = contact
+        self.present(destination, animated: true, completion: nil)
+    }
+        }
     
    
     
