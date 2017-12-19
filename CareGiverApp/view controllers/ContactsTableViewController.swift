@@ -18,7 +18,8 @@ class ContactsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         TableContainer?.delegate = self
-        TableContainer?.dataSource = self as? UITableViewDataSource
+        TableContainer?.dataSource = self as UITableViewDataSource
+        print("viewDidLoad happened")
        
         
       /*  let moveButton = UIBarButtonItem(barButtonSystemItem: .edit,  target: self, action: #selector(ClientsTableViewController.toggleEdit))
@@ -36,14 +37,14 @@ class ContactsTableViewController: UITableViewController {
         getData()
         // reload the table view
         TableContainer?.reloadData()
-        //make the table display the name
+        print("viewWillAppear happened")
         
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection: Int) -> Int {
         return contacts.count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        let cell =  tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let contact = contacts[indexPath.row]
         cell.textLabel?.text = contact.contactName
         return cell
@@ -65,10 +66,10 @@ class ContactsTableViewController: UITableViewController {
         let contact = self.contacts[indexPath.row]
         if
             let destination = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ContactsViewController") as? ContactsViewController {
-        destination.contact = contact
-        self.present(destination, animated: true, completion: nil)
-    }
+            destination.contact = contact
+            self.navigationController?.pushViewController(destination, animated: true)
         }
+    }
     
    
     
@@ -165,18 +166,15 @@ class ContactsTableViewController: UITableViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+ /*   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "DisplayContact" {
             let indexPath = self.tableView.indexPath(for: sender as! UITableViewCell)!
             let contact = self.contacts[indexPath.row]
             let destination = segue.destination as! ContactsViewController
             destination.contact = contact
         }
-        
-        
-        
-               
-            }
+   
+            } */
         }
         
 

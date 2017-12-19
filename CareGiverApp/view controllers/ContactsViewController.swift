@@ -29,7 +29,7 @@ var contact: ContactsEntity?
         let context =  (UIApplication.shared.delegate as! AppDelegate).persistantContainer.viewContext
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
         navigationController!.popViewController(animated: true)
-        let contact = ContactsEntity(context: context)
+       let contact = ContactsEntity(context: context)
         contact.contactName = nameLabel.text
         contact.contactPhone = phoneLabel.text
         contact.contactAddress1 = address1Label.text
@@ -38,7 +38,7 @@ var contact: ContactsEntity?
         contact.contactState = stateLabel.text
         contact.contactZip = zipcodeLabel.text
         contact.contactEmail = emailLabel.text
-        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+      //  (UIApplication.shared.delegate as! AppDelegate).saveContext()
     }
     
     override func viewDidLoad() {

@@ -296,7 +296,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="CareGiver App" id="8nh-L7-9YJ">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="Bl4-Lj-Ube"/>
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Bl4-Lj-Ube">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="8nb-AJ-6dA">
                             <connections>
                                 <action selector="addButton:" destination="FKk-yT-0ER" id="TmA-Cj-B2h"/>
@@ -472,10 +474,8 @@
                         <viewLayoutGuide key="safeArea" id="vfd-c9-QvG"/>
                     </view>
                     <navigationItem key="navigationItem" title="CaregiverApp" id="RDV-Te-Pek">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="luq-xv-8mT">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="G5b-Xh-LH2">
+                        <barButtonItem key="rightBarButtonItem" title="Done" style="plain" id="G5b-Xh-LH2">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="DoneButton:" destination="tLu-uo-Qqt" id="E6U-qn-BLD"/>
                             </connections>
@@ -621,6 +621,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="heO-KQ-AEc"/>
-        <segue reference="Uuz-oa-sPY"/>
+        <segue reference="7em-ba-W1b"/>
     </inferredMetricsTieBreakers>
 </document>
