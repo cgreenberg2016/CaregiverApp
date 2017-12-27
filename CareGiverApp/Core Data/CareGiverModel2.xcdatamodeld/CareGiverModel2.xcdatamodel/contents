@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17C88" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="ContactsEntity" representedClassName="ContactsEntity" syncable="YES">
-        <attribute name="contactAddress1" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="contactAddress2" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="contactCity" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="contactEmail" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="contactName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="contactPhone" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="contactState" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="contactZip" optional="YES" attributeType="String" syncable="YES"/>
+    <entity name="Contact" representedClassName="Contact" syncable="YES">
+        <attribute name="address1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="address2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="zip" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="Tasks" representedClassName="Tasks" syncable="YES">
+    <entity name="Task" representedClassName="Task" syncable="YES">
         <attribute name="completed" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="ContactsEntity" positionX="-45" positionY="18" width="128" height="165"/>
-        <element name="Tasks" positionX="-54" positionY="-9" width="128" height="75"/>
+        <element name="Contact" positionX="-45" positionY="18" width="128" height="165"/>
+        <element name="Task" positionX="-54" positionY="-9" width="128" height="75"/>
     </elements>
 </model>

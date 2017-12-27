@@ -13,13 +13,12 @@ class ToDoViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var TableResults: UITableView!
     
-    var tasks : [Tasks] = []
+    var tasks : [Task] = []
 
     @IBOutlet weak var txtInput: UITextField!
      var appDelegate = UIApplication.shared.delegate as! AppDelegate
      let context = (UIApplication.shared.delegate as! AppDelegate).persistantContainer.viewContext
     
-    var items: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,7 +56,7 @@ class ToDoViewController: UIViewController, UITableViewDelegate, UITableViewData
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
         
         do {
-            tasks = try context.fetch(Tasks.fetchRequest())
+            tasks = try context.fetch(Task.fetchRequest())
         }
         catch {
             print ("Fetching failed")
@@ -70,7 +69,7 @@ class ToDoViewController: UIViewController, UITableViewDelegate, UITableViewData
         let context = (UIApplication.shared.delegate as! AppDelegate).persistantContainer.viewContext
         
         do {
-            tasks = try context.fetch(Tasks.fetchRequest())
+            tasks = try context.fetch(Task.fetchRequest())
         }
         catch {
             print ("Fetching failed")
@@ -87,7 +86,7 @@ class ToDoViewController: UIViewController, UITableViewDelegate, UITableViewData
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
             
             do {
-                tasks = try context.fetch(Tasks.fetchRequest())
+                tasks = try context.fetch(Task.fetchRequest())
             }
             catch {
                 print ("Fetching failed")
@@ -104,7 +103,7 @@ class ToDoViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBAction func addItem(_ sender: UIButton) {
        let context = (UIApplication.shared.delegate as! AppDelegate).persistantContainer.viewContext
-       let task = Tasks(context: context)
+       let task = Task(context: context)
         task.title = txtInput.text
 
          (UIApplication.shared.delegate as! AppDelegate).saveContext()

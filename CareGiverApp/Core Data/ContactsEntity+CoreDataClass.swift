@@ -10,7 +10,7 @@
 import Foundation
 import CoreData
 
-@objc(ContactsEntity)
-public class ContactsEntity: NSManagedObject {
+@objc(Contact)
+public class Contact: NSManagedObject {
 
 }

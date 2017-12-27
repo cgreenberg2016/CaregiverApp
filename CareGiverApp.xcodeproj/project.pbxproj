@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		2756B55B1FE07E15008DF02B /* ContactsEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2756B5591FE07E15008DF02B /* ContactsEntity+CoreDataClass.swift */; };
 		2756B55C1FE07E15008DF02B /* ContactsEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2756B55A1FE07E15008DF02B /* ContactsEntity+CoreDataProperties.swift */; };
-		277473AA1FD8AD2000E9AA4F /* ClientsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277473A91FD8AD2000E9AA4F /* ClientsTableView.swift */; };
 		278514E01FBE5AA500228F1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278514DF1FBE5AA500228F1A /* AppDelegate.swift */; };
 		278514E21FBE5AA500228F1A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278514E11FBE5AA500228F1A /* HomeViewController.swift */; };
 		278514E51FBE5AA500228F1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 278514E31FBE5AA500228F1A /* Main.storyboard */; };
@@ -18,6 +17,7 @@
 		278F93E21FC36A4F00733969 /* ToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278F93E11FC36A4F00733969 /* ToDoViewController.swift */; };
 		278F93E61FC4D2AB00733969 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278F93E51FC4D2AB00733969 /* ContactsTableViewController.swift */; };
 		278F93EA1FC4E32A00733969 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278F93E91FC4E32A00733969 /* ContactsViewController.swift */; };
+		27A7BD201FF32B0100B8610E /* ClientsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A7BD1F1FF32B0100B8610E /* ClientsTableViewController.swift */; };
 		27BAB0161FDF320A0088507C /* Tasks+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BAB0141FDF320A0088507C /* Tasks+CoreDataClass.swift */; };
 		27BAB0171FDF320A0088507C /* Tasks+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BAB0151FDF320A0088507C /* Tasks+CoreDataProperties.swift */; };
 		27BAB0221FDF33CD0088507C /* CareGiverModel2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27BAB0201FDF33CD0088507C /* CareGiverModel2.xcdatamodeld */; };
@@ -27,7 +27,6 @@
 /* Begin PBXFileReference section */
 		2756B5591FE07E15008DF02B /* ContactsEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContactsEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2756B55A1FE07E15008DF02B /* ContactsEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContactsEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		277473A91FD8AD2000E9AA4F /* ClientsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsTableView.swift; sourceTree = "<group>"; };
 		278514DC1FBE5AA500228F1A /* CareGiverApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CareGiverApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		278514DF1FBE5AA500228F1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		278514E11FBE5AA500228F1A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +37,7 @@
 		278F93E11FC36A4F00733969 /* ToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewController.swift; sourceTree = "<group>"; };
 		278F93E51FC4D2AB00733969 /* ContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
 		278F93E91FC4E32A00733969 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		27A7BD1F1FF32B0100B8610E /* ClientsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientsTableViewController.swift; sourceTree = "<group>"; };
 		27BAB0141FDF320A0088507C /* Tasks+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tasks+CoreDataClass.swift"; sourceTree = "<group>"; };
 		27BAB0151FDF320A0088507C /* Tasks+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tasks+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		27BAB0211FDF33CD0088507C /* CareGiverModel2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CareGiverModel2.xcdatamodel; sourceTree = "<group>"; };
@@ -58,7 +58,7 @@
 		2756B55D1FE1F838008DF02B /* view controllers */ = {
 			isa = PBXGroup;
 			children = (
-				277473A91FD8AD2000E9AA4F /* ClientsTableView.swift */,
+				27A7BD1F1FF32B0100B8610E /* ClientsTableViewController.swift */,
 				278F93E51FC4D2AB00733969 /* ContactsTableViewController.swift */,
 				278F93E91FC4E32A00733969 /* ContactsViewController.swift */,
 				278514E11FBE5AA500228F1A /* HomeViewController.swift */,
@@ -183,13 +183,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				278F93E61FC4D2AB00733969 /* ContactsTableViewController.swift in Sources */,
+				27A7BD201FF32B0100B8610E /* ClientsTableViewController.swift in Sources */,
 				278F93E21FC36A4F00733969 /* ToDoViewController.swift in Sources */,
 				27BAB0221FDF33CD0088507C /* CareGiverModel2.xcdatamodeld in Sources */,
 				278F93EA1FC4E32A00733969 /* ContactsViewController.swift in Sources */,
 				2756B55B1FE07E15008DF02B /* ContactsEntity+CoreDataClass.swift in Sources */,
 				278514E21FBE5AA500228F1A /* HomeViewController.swift in Sources */,
 				27BFAD3D1FCCE56900D76833 /* Schedule.swift in Sources */,
-				277473AA1FD8AD2000E9AA4F /* ClientsTableView.swift in Sources */,
 				27BAB0171FDF320A0088507C /* Tasks+CoreDataProperties.swift in Sources */,
 				27BAB0161FDF320A0088507C /* Tasks+CoreDataClass.swift in Sources */,
 				2756B55C1FE07E15008DF02B /* ContactsEntity+CoreDataProperties.swift in Sources */,

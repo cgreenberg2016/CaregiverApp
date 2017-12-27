@@ -14,7 +14,7 @@ class ContactsTableViewController: UITableViewController {
     
     @IBOutlet var TableContainer: UITableView!
     
-    var contacts:[ContactsEntity] = []
+    var contacts:[Contact] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         TableContainer?.delegate = self
@@ -46,7 +46,7 @@ class ContactsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell =  tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let contact = contacts[indexPath.row]
-        cell.textLabel?.text = contact.contactName
+        cell.textLabel?.text = contact.name
         return cell
     }
     // fetch data
@@ -54,7 +54,7 @@ class ContactsTableViewController: UITableViewController {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistantContainer.viewContext
         
         do {
-            contacts = try context.fetch(ContactsEntity.fetchRequest()) as! [ContactsEntity]
+            contacts = try context.fetch(Contact.fetchRequest()) as! [Contact]
         }
         catch {
             print ("Fetching failed")

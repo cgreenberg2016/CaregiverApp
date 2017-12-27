@@ -23,19 +23,19 @@ class ContactsViewController: UIViewController {
     @IBOutlet weak var stateLabel: UITextField!
     @IBOutlet weak var zipcodeLabel: UITextField!
     @IBOutlet weak var emailLabel: UITextField!
-    var contact: ContactsEntity?
+    var contact: Contact?
     
     @IBAction func DoneButton(_ sender: UIBarButtonItem) {
-        let context =  (UIApplication.shared.delegate as! AppDelegate).persistantContainer.viewContext
+        
         if let contact = contact {
-            contact.contactName = nameLabel.text
-            contact.contactPhone = phoneLabel.text
-            contact.contactAddress1 = address1Label.text
-            contact.contactAddress2 = address2Label.text
-            contact.contactCity = cityLabel.text
-            contact.contactState = stateLabel.text
-            contact.contactZip = zipcodeLabel.text
-            contact.contactEmail = emailLabel.text
+            contact.name = nameLabel.text
+            contact.phone = phoneLabel.text
+            contact.address1 = address1Label.text
+            contact.address2 = address2Label.text
+            contact.city = cityLabel.text
+            contact.state = stateLabel.text
+            contact.zip = zipcodeLabel.text
+            contact.email = emailLabel.text
         }
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
         navigationController!.popViewController(animated: true)
@@ -50,7 +50,7 @@ class ContactsViewController: UIViewController {
         notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: Notification.Name.UIKeyboardWillChangeFrame, object: nil)
         if contact == nil {
             let context =  (UIApplication.shared.delegate as! AppDelegate).persistantContainer.viewContext
-            contact = ContactsEntity(context: context)
+            contact = Contact(context: context)
             
             
             
@@ -68,28 +68,28 @@ class ContactsViewController: UIViewController {
         self.emailLabel.delegate = self as? UITextFieldDelegate
         
         if let contact = self.contact {
-            if let name = contact.contactName {
+            if let name = contact.name {
                 self.nameLabel.text = name
             }
-            if let phone = contact.contactPhone {
+            if let phone = contact.phone {
                 self.phoneLabel.text = phone
             }
-            if let address1 = contact.contactAddress1 {
+            if let address1 = contact.address1 {
                 self.address1Label.text = address1
             }
-            if let address2 = contact.contactAddress2 {
+            if let address2 = contact.address2 {
                 self.address2Label.text = address2
             }
-            if let city = contact.contactCity {
+            if let city = contact.city {
                 self.cityLabel.text = city
             }
-            if let state = contact.contactState {
+            if let state = contact.state {
                 self.stateLabel.text = state
             }
-            if let zipcode = contact.contactZip {
+            if let zipcode = contact.zip {
                 self.zipcodeLabel.text = zipcode
             }
-            if let email = contact.contactEmail {
+            if let email = contact.email {
                 self.emailLabel.text = email
             }
             

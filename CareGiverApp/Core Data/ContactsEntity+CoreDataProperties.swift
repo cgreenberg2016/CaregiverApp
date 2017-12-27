@@ -11,19 +11,19 @@ import Foundation
 import CoreData
 
 
-extension ContactsEntity {
+extension Contact {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<ContactsEntity> {
-        return NSFetchRequest<ContactsEntity>(entityName: "ContactsEntity")
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<Contact> {
+        return NSFetchRequest<Contact>(entityName: "Contact")
     }
 
-    @NSManaged public var contactEmail: String?
-    @NSManaged public var contactAddress1: String?
-    @NSManaged public var contactAddress2: String?
-    @NSManaged public var contactCity: String?
-    @NSManaged public var contactName: String?
-    @NSManaged public var contactPhone: String?
-    @NSManaged public var contactState: String?
-    @NSManaged public var contactZip: String?
+    @NSManaged public var email: String?
+    @NSManaged public var address1: String?
+    @NSManaged public var address2: String?
+    @NSManaged public var city: String?
+    @NSManaged public var name: String?
+    @NSManaged public var phone: String?
+    @NSManaged public var state: String?
+    @NSManaged public var zip: String?
 
 }
