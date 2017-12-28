@@ -11,27 +11,30 @@ import CoreData
 
 class ClientsTableViewController: UITableViewController {
 
-    @IBOutlet var ClientsTable: UITableView!
+    @IBOutlet weak var clientsTable: UITableView!
+
     
-    var clients:[ContactsEntity] = []
+  //  @IBOutlet var ClientsTable: UITableView!
+    
+    var clients:[Client] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-        ClientsTable?.delegate = self
-        ClientsTable?.dataSource = self
+        clientsTable?.delegate = self
+        clientsTable?.dataSource = self as UITableViewDataSource
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
          self.navigationItem.rightBarButtonItem = self.editButtonItem
-        print ("view really did load")
+        print ("view did load from ClientsTableViewController")
     }
     override func viewWillAppear(_ animated: Bool) {
         //get data from core data
         getData()
         // reload the table view
-        ClientsTable?.reloadData()
-        print("viewWillAppear happened")
+        clientsTable?.reloadData()
+        print("viewWillAppear happened from ClientsTableViewController")
         
     }
 
@@ -44,7 +47,7 @@ class ClientsTableViewController: UITableViewController {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistantContainer.viewContext
         
         do {
-            clients = try context.fetch(ContactsEntity.fetchRequest()) as! [ContactsEntity]
+            clients = try context.fetch(Client.fetchRequest()) as! [Client]
         }
         catch {
             print ("Fetching failed")
@@ -63,7 +66,7 @@ class ClientsTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell2", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
         // Configure the cell...
         cell.textLabel?.text = "A fine example"
