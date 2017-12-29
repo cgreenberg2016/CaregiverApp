@@ -9,18 +9,19 @@
 import UIKit
 import CoreData
 
-class ClientsTableViewController: UITableViewController {
-
-    @IBOutlet weak var clientsTable: UITableView!
-
-    
-  //  @IBOutlet var ClientsTable: UITableView!
+class ClientsTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var clients:[Client] = []
+    
+    @IBOutlet weak var clientTable: UITableView!
+    var appDelegate = UIApplication.shared.delegate as! AppDelegate
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistantContainer.viewContext
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        clientsTable?.delegate = self
-        clientsTable?.dataSource = self as UITableViewDataSource
+        clientTable?.delegate = self
+        clientTable?.dataSource = self as UITableViewDataSource
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -33,7 +34,7 @@ class ClientsTableViewController: UITableViewController {
         //get data from core data
         getData()
         // reload the table view
-        clientsTable?.reloadData()
+        clientTable?.reloadData()
         print("viewWillAppear happened from ClientsTableViewController")
         
     }
@@ -56,16 +57,16 @@ class ClientsTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return clients.count
     }
 
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
         // Configure the cell...
@@ -114,9 +115,8 @@ class ClientsTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+
     }
-   
 
 }

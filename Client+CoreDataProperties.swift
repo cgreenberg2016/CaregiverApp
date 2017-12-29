@@ -18,6 +18,6 @@ extension Client {
     }
 
     @NSManaged public var name: String?
-    @NSManaged public var contact: Contact?
+ //   @NSManaged public var contact: Contact?
 
 }

@@ -23,7 +23,7 @@ class ToDoViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         TableResults?.delegate = self
-        TableResults?.dataSource = self as? UITableViewDataSource
+        TableResults?.dataSource = self as UITableViewDataSource
     }
     
     override func viewWillAppear(_ animated: Bool) {
