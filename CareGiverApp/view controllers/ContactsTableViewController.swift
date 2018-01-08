@@ -19,12 +19,9 @@ class ContactsTableViewController: UITableViewController {
         super.viewDidLoad()
         TableContainer?.delegate = self
         TableContainer?.dataSource = self as UITableViewDataSource
-        print("viewDidLoad happened")
-        
         
         /*  let moveButton = UIBarButtonItem(barButtonSystemItem: .edit,  target: self, action: #selector(ClientsTableViewController.toggleEdit))
          navigationItem.leftBarButtonItem = moveButton*/
-        
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -37,7 +34,7 @@ class ContactsTableViewController: UITableViewController {
         getData()
         // reload the table view
         TableContainer?.reloadData()
-        print("viewWillAppear happened")
+        
         
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection: Int) -> Int {
@@ -91,11 +88,12 @@ class ContactsTableViewController: UITableViewController {
         tableView.setEditing(!tableView.isEditing, animated: true)
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(ContactsTableViewController.doneEdit))
         navigationItem.leftBarButtonItem = doneButton
+        navigationItem.leftBarButtonItem?.tintColor = UIColor.white
     }
     @objc func doneEdit() {
         tableView.setEditing(false, animated: true)
         let moveButton = UIBarButtonItem(barButtonSystemItem: .edit,  target: self, action: #selector(ContactsTableViewController.toggleEdit))
-        navigationItem.leftBarButtonItem = moveButton
+        
     }
     
     @objc func addContact() {
@@ -103,11 +101,7 @@ class ContactsTableViewController: UITableViewController {
         // the add button should go to the next screen. when the user inputs all the information, there should be a save button that goes back to the contact list screen that shows the contact
         
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
-        
-        //        let newContact = Contact(name: "Enter New Contact", phone: "Enter New Phone Number")
-        //        self.contacts.append(newContact)
-        //        let newIndexPath = IndexPath(row: self.contacts.count - 1, section: 0)
-        //        self.tableView.insertRows(at: [newIndexPath], with: .automatic)
+
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

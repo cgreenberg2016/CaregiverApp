@@ -2,7 +2,7 @@
 //  Client+CoreDataProperties.swift
 //  CareGiverApp
 //
-//  Created by Carol Greenberg on 12/26/17.
+//  Created by Carol Greenberg on 12/29/17.
 //  Copyright © 2017 Carol Greenberg. All rights reserved.
 //
 //
@@ -18,6 +18,6 @@ extension Client {
     }
 
     @NSManaged public var name: String?
- //   @NSManaged public var contact: Contact?
+    @NSManaged public var contact: Contact?
 
 }

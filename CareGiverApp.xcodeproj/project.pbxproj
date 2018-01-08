@@ -76,6 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				27BAB0201FDF33CD0088507C /* CareGiverModel2.xcdatamodeld */,
+				27A7BD211FF32C5B00B8610E /* Client+CoreDataClass.swift */,
+				27A7BD221FF32C5B00B8610E /* Client+CoreDataProperties.swift */,
 				2756B5591FE07E15008DF02B /* ContactsEntity+CoreDataClass.swift */,
 				2756B55A1FE07E15008DF02B /* ContactsEntity+CoreDataProperties.swift */,
 				27BAB0141FDF320A0088507C /* Tasks+CoreDataClass.swift */,
@@ -87,8 +89,6 @@
 		278514D31FBE5AA500228F1A = {
 			isa = PBXGroup;
 			children = (
-				27A7BD211FF32C5B00B8610E /* Client+CoreDataClass.swift */,
-				27A7BD221FF32C5B00B8610E /* Client+CoreDataProperties.swift */,
 				278514DE1FBE5AA500228F1A /* CareGiverApp */,
 				278514DD1FBE5AA500228F1A /* Products */,
 			);

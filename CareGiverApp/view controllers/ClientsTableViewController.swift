@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class ClientsTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ClientsTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ContactsViewControllerDelegate {
     
     var clients:[Client] = []
     
@@ -17,7 +17,7 @@ class ClientsTableViewController: UIViewController, UITableViewDataSource, UITab
     var appDelegate = UIApplication.shared.delegate as! AppDelegate
     let context = (UIApplication.shared.delegate as! AppDelegate).persistantContainer.viewContext
 
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         clientTable?.delegate = self
@@ -27,16 +27,14 @@ class ClientsTableViewController: UIViewController, UITableViewDataSource, UITab
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-         self.navigationItem.rightBarButtonItem = self.editButtonItem
-        print ("view did load from ClientsTableViewController")
+         self.navigationItem.leftBarButtonItem = self.editButtonItem
+       
     }
     override func viewWillAppear(_ animated: Bool) {
         //get data from core data
         getData()
         // reload the table view
         clientTable?.reloadData()
-        print("viewWillAppear happened from ClientsTableViewController")
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -68,9 +66,9 @@ class ClientsTableViewController: UIViewController, UITableViewDataSource, UITab
     
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-
-        // Configure the cell...
-        cell.textLabel?.text = "A fine example"
+        let client = clients[indexPath.row]
+        cell.textLabel?.text = client.contact?.name ?? "unknown"
+        
         return cell
     }
     
@@ -110,12 +108,29 @@ class ClientsTableViewController: UIViewController, UITableViewDataSource, UITab
     }
     */
 
-   
+    func updateContact(_ contact: Contact) {
+        getData()
+        clientTable.reloadData()
+    }
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        if segue.identifier == "DisplayContact" {
+            let indexPath = self.clientTable.indexPath(for: sender as! UITableViewCell)!
+            let client = self.clients[indexPath.row]
+            let destination = segue.destination as! ContactsViewController
+            destination.contact = client.contact
+            destination.delegate = self
+        } else if segue.identifier == "addclient" {
+            let context =  (UIApplication.shared.delegate as! AppDelegate).persistantContainer.viewContext
+            let contact = Contact(context: context)
+            let client = Client(context: context)
+            client.contact = contact
+            let destination = segue.destination as! ContactsViewController
+            destination.contact = client.contact
+            destination.delegate = self
+        }
 
     }
 

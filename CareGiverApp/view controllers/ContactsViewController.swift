@@ -8,7 +8,9 @@
 
 import UIKit
 import CoreData
-
+protocol ContactsViewControllerDelegate {
+    func updateContact(_ contact: Contact)
+}
 class ContactsViewController: UIViewController {
     
     @IBOutlet weak var ScrollView: UIScrollView!
@@ -24,6 +26,7 @@ class ContactsViewController: UIViewController {
     @IBOutlet weak var zipcodeLabel: UITextField!
     @IBOutlet weak var emailLabel: UITextField!
     var contact: Contact?
+    var delegate: ContactsViewControllerDelegate?
     
     @IBAction func DoneButton(_ sender: UIBarButtonItem) {
         
@@ -36,6 +39,9 @@ class ContactsViewController: UIViewController {
             contact.state = stateLabel.text
             contact.zip = zipcodeLabel.text
             contact.email = emailLabel.text
+            if let delegate = delegate {
+                delegate.updateContact(contact)
+            }
         }
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
         navigationController!.popViewController(animated: true)
@@ -51,9 +57,6 @@ class ContactsViewController: UIViewController {
         if contact == nil {
             let context =  (UIApplication.shared.delegate as! AppDelegate).persistantContainer.viewContext
             contact = Contact(context: context)
-            
-            
-            
         }
         
         
