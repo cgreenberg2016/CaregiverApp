@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		271FD880202A98FC00B2D96A /* ClientAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271FD87F202A98FC00B2D96A /* ClientAttribute.swift */; };
+		271FD882202A9B9200B2D96A /* ClientAttributeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271FD881202A9B9200B2D96A /* ClientAttributeViewController.swift */; };
 		272370431FF5EC2D00F0FD79 /* ClientsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272370421FF5EC2D00F0FD79 /* ClientsTableViewController.swift */; };
 		2756B55B1FE07E15008DF02B /* ContactsEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2756B5591FE07E15008DF02B /* ContactsEntity+CoreDataClass.swift */; };
 		2756B55C1FE07E15008DF02B /* ContactsEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2756B55A1FE07E15008DF02B /* ContactsEntity+CoreDataProperties.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		271FD87F202A98FC00B2D96A /* ClientAttribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientAttribute.swift; sourceTree = "<group>"; };
+		271FD881202A9B9200B2D96A /* ClientAttributeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientAttributeViewController.swift; sourceTree = "<group>"; };
 		272370421FF5EC2D00F0FD79 /* ClientsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientsTableViewController.swift; sourceTree = "<group>"; };
 		2756B5591FE07E15008DF02B /* ContactsEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContactsEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2756B55A1FE07E15008DF02B /* ContactsEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContactsEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -112,6 +116,8 @@
 				278514EB1FBE5AA500228F1A /* Info.plist */,
 				278514E81FBE5AA500228F1A /* LaunchScreen.storyboard */,
 				278514E31FBE5AA500228F1A /* Main.storyboard */,
+				271FD881202A9B9200B2D96A /* ClientAttributeViewController.swift */,
+				271FD87F202A98FC00B2D96A /* ClientAttribute.swift */,
 			);
 			path = CareGiverApp;
 			sourceTree = "<group>";
@@ -188,11 +194,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				271FD882202A9B9200B2D96A /* ClientAttributeViewController.swift in Sources */,
 				278F93E61FC4D2AB00733969 /* ContactsTableViewController.swift in Sources */,
 				27A7BD241FF32C5B00B8610E /* Client+CoreDataProperties.swift in Sources */,
 				278F93E21FC36A4F00733969 /* ToDoViewController.swift in Sources */,
 				27BAB0221FDF33CD0088507C /* CareGiverModel2.xcdatamodeld in Sources */,
 				278F93EA1FC4E32A00733969 /* ContactsViewController.swift in Sources */,
+				271FD880202A98FC00B2D96A /* ClientAttribute.swift in Sources */,
 				2756B55B1FE07E15008DF02B /* ContactsEntity+CoreDataClass.swift in Sources */,
 				278514E21FBE5AA500228F1A /* HomeViewController.swift in Sources */,
 				27BFAD3D1FCCE56900D76833 /* Schedule.swift in Sources */,
