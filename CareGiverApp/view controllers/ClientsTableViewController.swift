@@ -130,6 +130,12 @@ class ClientsTableViewController: UIViewController, UITableViewDataSource, UITab
             let destination = segue.destination as! ContactsViewController
             destination.contact = client.contact
             destination.delegate = self
+        } else if segue.identifier == "DisplayClientAttributes" {
+            let indexPath = self.clientTable.indexPath(for: sender as! UITableViewCell)!
+            let client = self.clients[indexPath.row]
+            let destination = segue.destination as! ClientAttributeViewController
+            destination.client = client
+            
         }
 
     }

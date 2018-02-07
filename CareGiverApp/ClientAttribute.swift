@@ -8,7 +8,7 @@
 
 import Foundation
 let clientAttributes: [ClientAttribute] =
-    [ClientAttribute ("Appointments"),ClientAttribute("Medications"), ClientAttribute("Trackers"), ClientAttribute("MedicalCond"), ClientAttribute("Emergency"), ClientAttribute("PersonalInfo")]
+    [ClientAttribute ("Appointments"),ClientAttribute("Medications"), ClientAttribute("Trackers"), ClientAttribute("Medical Condition"), ClientAttribute("Emergency Contact"), ClientAttribute("Personal Information")]
 class ClientAttribute {
     let title: String;
     init (_ title:String) {

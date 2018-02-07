@@ -8,11 +8,20 @@
 
 import UIKit
 
-class ClientAttributeViewController: UIViewController {
-
+class ClientAttributeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+   
+    
+    var client: Client?
+    
+    @IBOutlet weak var tableview: UITableView!
+    
+    @IBOutlet weak var clientnamelabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tableview.delegate = self
+        tableview.dataSource = self
+        clientnamelabel.text = client?.contact?.name
         // Do any additional setup after loading the view.
     }
 
@@ -21,15 +30,21 @@ class ClientAttributeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // MARK: - Table view data source
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return clientAttributes.count
+        
     }
-    */
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell =  tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = clientAttributes[indexPath.row].title
+        return cell
+
+    }
+    
+    
 
 }
