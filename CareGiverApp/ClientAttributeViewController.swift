@@ -45,6 +45,17 @@ class ClientAttributeViewController: UIViewController, UITableViewDelegate, UITa
 
     }
     
-    
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let segueidentifier = clientAttributes[indexPath.row].segueidentifier
+            {
+            self.performSegue(withIdentifier: segueidentifier, sender: self)
+        }
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showPersonalInfo" {
+            let destination = segue.destination as! ContactsViewController
+            destination.contact = client?.contact
+            
+        }
+    }
 }

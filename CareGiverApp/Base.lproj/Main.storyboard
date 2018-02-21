@@ -194,7 +194,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="o7B-EQ-aVQ">
-                                <rect key="frame" x="0.0" y="133" width="320" height="386"/>
+                                <rect key="frame" x="0.0" y="153" width="320" height="366"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -225,7 +225,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Client Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsd-tj-4Uf">
-                                <rect key="frame" x="16" y="104" width="216" height="21"/>
+                                <rect key="frame" x="16" y="112" width="216" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -238,6 +238,7 @@
                     <connections>
                         <outlet property="clientnamelabel" destination="lsd-tj-4Uf" id="JAr-tU-cB7"/>
                         <outlet property="tableview" destination="o7B-EQ-aVQ" id="dvS-ZB-Fvy"/>
+                        <segue destination="tLu-uo-Qqt" kind="show" identifier="showPersonalInfo" id="mfN-02-tqj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LYr-HR-BnB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -622,7 +623,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MLZ-0j-fPd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3234.375" y="588.38028169014081"/>
+            <point key="canvasLocation" x="3345" y="589"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="sMb-vj-kNx">
@@ -709,6 +710,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="4QH-5s-uMF"/>
-        <segue reference="Vpg-AA-EAc"/>
+        <segue reference="mfN-02-tqj"/>
     </inferredMetricsTieBreakers>
 </document>
