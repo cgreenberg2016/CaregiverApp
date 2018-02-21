@@ -14,7 +14,15 @@
         <attribute name="zip" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Emergency" representedClassName="Emergency" syncable="YES" codeGenerationType="class">
-        <attribute name="attribute" optional="YES" syncable="YES"/>
+        <attribute name="family1" optional="YES" syncable="YES"/>
+        <attribute name="family1Phone" optional="YES" syncable="YES"/>
+        <attribute name="family2" optional="YES" syncable="YES"/>
+        <attribute name="family2Phone" optional="YES" syncable="YES"/>
+        <attribute name="other" optional="YES" syncable="YES"/>
+        <attribute name="otherPhone" optional="YES" syncable="YES"/>
+        <attribute name="physician" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="physicianPhone" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="contact" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Contact" syncable="YES"/>
     </entity>
     <entity name="Task" representedClassName="Task" syncable="YES">
         <attribute name="completed" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
@@ -24,6 +32,6 @@
         <element name="Client" positionX="-45" positionY="63" width="128" height="60"/>
         <element name="Contact" positionX="-45" positionY="18" width="128" height="165"/>
         <element name="Task" positionX="-54" positionY="-9" width="128" height="75"/>
-        <element name="Emergency" positionX="-36" positionY="63" width="128" height="60"/>
+        <element name="Emergency" positionX="-36" positionY="63" width="128" height="180"/>
     </elements>
 </model>
