@@ -56,6 +56,11 @@ class ClientAttributeViewController: UIViewController, UITableViewDelegate, UITa
             let destination = segue.destination as! ContactsViewController
             destination.contact = client?.contact
             
+        } else if
+             segue.identifier == "showEmergency" {
+               let destination = segue.destination as! EmergencyContactViewController
+               destination.client = client
+            
         }
     }
 }

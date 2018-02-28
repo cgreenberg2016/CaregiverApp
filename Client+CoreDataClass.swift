@@ -2,8 +2,8 @@
 //  Client+CoreDataClass.swift
 //  CareGiverApp
 //
-//  Created by Carol Greenberg on 12/26/17.
-//  Copyright © 2017 Carol Greenberg. All rights reserved.
+//  Created by Carol Greenberg on 2/27/18.
+//  Copyright © 2018 Carol Greenberg. All rights reserved.
 //
 //
 

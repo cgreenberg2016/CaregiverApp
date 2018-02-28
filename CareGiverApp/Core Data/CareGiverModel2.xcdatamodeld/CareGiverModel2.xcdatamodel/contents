@@ -2,6 +2,7 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17C88" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Client" representedClassName="Client" syncable="YES">
         <relationship name="contact" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Contact" syncable="YES"/>
+        <relationship name="emergency" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Emergency" syncable="YES"/>
     </entity>
     <entity name="Contact" representedClassName="Contact" syncable="YES">
         <attribute name="address1" optional="YES" attributeType="String" syncable="YES"/>
@@ -13,13 +14,13 @@
         <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="zip" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="Emergency" representedClassName="Emergency" syncable="YES" codeGenerationType="class">
-        <attribute name="family1" optional="YES" syncable="YES"/>
-        <attribute name="family1Phone" optional="YES" syncable="YES"/>
-        <attribute name="family2" optional="YES" syncable="YES"/>
-        <attribute name="family2Phone" optional="YES" syncable="YES"/>
-        <attribute name="other" optional="YES" syncable="YES"/>
-        <attribute name="otherPhone" optional="YES" syncable="YES"/>
+    <entity name="Emergency" representedClassName="Emergency" syncable="YES">
+        <attribute name="family1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="family1Phone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="family2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="family2Phone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="other" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="otherPhone" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="physician" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="physicianPhone" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="contact" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Contact" syncable="YES"/>
@@ -29,9 +30,9 @@
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Client" positionX="-45" positionY="63" width="128" height="60"/>
+        <element name="Client" positionX="-45" positionY="63" width="128" height="75"/>
         <element name="Contact" positionX="-45" positionY="18" width="128" height="165"/>
-        <element name="Task" positionX="-54" positionY="-9" width="128" height="75"/>
         <element name="Emergency" positionX="-36" positionY="63" width="128" height="180"/>
+        <element name="Task" positionX="-54" positionY="-9" width="128" height="75"/>
     </elements>
 </model>
